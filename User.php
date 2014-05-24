@@ -28,5 +28,9 @@ class User {
     public static $ERROR_WRONG_USERNAME = -2;
     public static $ERROR_WRONG_PASSWORD = -3;
 
+    public static $FRIENDSHIP_REQUESTED = 2;
+    public static $FRIENDSHIP_FRIENDS = 3;
+    public static $FRIENDSHIP_NOT_FRIENDS = 4;
+
     public $error = array();
 }

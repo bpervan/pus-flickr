@@ -19,7 +19,12 @@ if(isset($_GET['action'])){
         case "doRequestFriendship":
             $db->makeFriendshipRequest($_SESSION['userId'], $_GET['userId']);
             break;
+        case "doConfirmFriendship":
+            $db->confirmFriend($_SESSION['userId'], $_GET['userId']);
+            break;
+        case "doDenyFriendship":
 
+            break;
     }
 }
 ?>
@@ -46,7 +51,10 @@ if(isset($_GET['action'])){
             <?php
             if(isset($_SESSION['userLoggedIn'])){
                 if($_SESSION['userLoggedIn'] == User::$codeLoggedIn){
-                    $htmlEngine->printUserUserProfileMenu($_SESSION['name'], $_GET['userId'], false);
+                    $htmlEngine->printUserUserProfileMenu(
+                        $_SESSION['name'],
+                        $_GET['userId'],
+                        $db->getFriendshipStatus($_SESSION['userId'], $_GET['userId']));
                 } else {
                     $htmlEngine->printLoginForm();
                 }
@@ -66,6 +74,25 @@ if(isset($_GET['action'])){
                 <p class=\"text-center text-info\">Username: {$user->username}</p>
                 <p class=\"text-center text-info\">User ID: {$user->userId}</p>
                 ";
+
+                if($_SESSION['userId'] == $_GET['userId']){
+                    echo " <p class=\"text-center\">Ovo je moj profil!</p>";
+
+                    $friendshipRequests = $db->getFriendshipRequests($_GET['userId']);
+                    if($friendshipRequests != null){
+                        echo " <p class=\"text-center\">Dostupni su zahtjevi za prijateljstvo</p>";
+                        echo "<ul>";
+                        $count = count($friendshipRequests);
+                        for($i = 0; $i < $count; ++$i){
+                            echo "<li>
+                        {$friendshipRequests[$i]->name} {$friendshipRequests[$i]->surname}
+                        <a href=\"showuser.php?action=doConfirmFriendship&userId={$friendshipRequests[$i]->userId}\">POTVRDI PRIJATELJSTVO
+                        <a href=\"showuser.php?action=doDenyFriendship&userId={$friendshipRequests[$i]->userId}\">ODBIJ PRIJATELJSTVO</a>
+                        </li>";
+                        }
+                        echo "</ul>";
+                    }
+                }
             }
             ?>
         </div>

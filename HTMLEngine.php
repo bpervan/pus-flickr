@@ -30,7 +30,7 @@ class HTMLEngine {
                 <p class=\"text-info\">Korisničko ime:
                     <input class=\"input-large\" name=\"username\" type=\"text\" /><br />
                 </p>
-                <p class=\"text-info\">Korisničko ime:
+                <p class=\"text-info\">Lozinka:
                     <input class=\"input-large\" name=\"password\" type=\"password\" /><br />
                 </p>
                     <input class=\"btn btn-large btn-success\" value=\"Prijavi se\" type=\"submit\" /><br />
@@ -73,12 +73,15 @@ class HTMLEngine {
                 <p class=\"text-info\">Datoteka:<br />
                     <input class=\"input-large\" type=\"file\" name=\"image\" /><br />
                 </p>
+                <p class=\"text-info\">Privatno?:<br />
+                    <input class=\"checkbox\" type=\"checkbox\" name=\"private\" /><br />
+                </p>
                 <input class=\"btn btn-large btn-success\" value=\"Pošalji sliku\" type=\"submit\" /><br />
             </form>
         ";
     }
 
-    public function printUserMainMenu($name, $imageId = null, $liked = null, $userId = null, $friends = null){
+    public function printUserMainMenu($name, $imageId = null, $liked = null, $userId = null){
         echo"
             <ul class=\"nav nav-list\">
                 <li class=\"nav-header\">Trenutno prijavljen: {$name}</li>
@@ -86,6 +89,8 @@ class HTMLEngine {
                 <li><a href=\"#\">Pregledaj svoje slike</a></li>
                 <li><a href=\"#\">Pregledaj slike prijatelja</a></li>
                 <li><a href=\"#\">Pregledaj javno dostupne slike</a></li>
+                <li><a href=\"search.php\">Pretraga korisnika</a></li>
+                <li><a href=\"showuser.php?userId={$userId}\">Pogledaj svoj profil</a></li>
             ";
         if($imageId != null){
             if(true == $liked){
@@ -94,14 +99,6 @@ class HTMLEngine {
                 echo "<li><a href=\"showimage.php?action=doLike&imageId={$imageId}\">Lajkaj sliku</a></li>";
             }
             echo "<li><a href=\"#\">Označi prijatelja na slici</a></li>";
-        }
-
-        if($userId != null){
-            if(true == $friends){
-                echo "<li>Frendovi</li>";
-            } else {
-                echo "<li><a href=\"showuser.php?action=doRequestFriendship&userId={$userId}\">Zatraži prijateljstvo</a></li>";
-            }
         }
 
         echo "
@@ -119,11 +116,17 @@ class HTMLEngine {
                 <li><a href=\"#\">Pregledaj svoje slike</a></li>
                 <li><a href=\"#\">Pregledaj slike prijatelja</a></li>
                 <li><a href=\"#\">Pregledaj javno dostupne slike</a></li>
+                <li><a href=\"search.php\">Pretraga korisnika</a></li>
             ";
-        if(true == $friends){
-            echo "<li>Frendovi</li>";
-        } else {
-            echo "<li><a href=\"showuser.php?action=doRequestFriendship&userId={$userId}\">Zatraži prijateljstvo</a></li>";
+
+        if($userId != $_SESSION['userId']){
+            if(User::$FRIENDSHIP_FRIENDS == $friends){
+                echo "<li>Frendovi</li>";
+            } else if(User::$FRIENDSHIP_NOT_FRIENDS == $friends) {
+                echo "<li><a href=\"showuser.php?action=doRequestFriendship&userId={$userId}\">Zatraži prijateljstvo</a></li>";
+            } else if (User::$FRIENDSHIP_REQUESTED == $friends){
+                echo "<li>Friendship requested</li>";
+            }
         }
 
         echo "
@@ -137,6 +140,7 @@ class HTMLEngine {
         echo "
         <ul class=\"nav\">
             <li><a href=\"index.php\">Početna</a></li>
+            <li><a href=\"search.php\">Pretraga korisnika</a></li>
             <li><a href=\"register.php\">Registracija</a></li>
             <li><a href=\"index.php?action=doLogout\">Odjavi se</a></li>
         </ul>
@@ -153,6 +157,26 @@ class HTMLEngine {
             <input type=\"hidden\" name=\"action\" value=\"doPostComment\" />
             <input class=\"btn btn-large btn-success\" value=\"Pošalji komentar\" type=\"submit\" /><br />
         </form>
+        ";
+    }
+
+    public function printSearchForm($returnAddress = null){
+        echo "
+            <form name=\"searchForm\" method=\"get\" action=\"search.php\">
+                <p class=\"text-info\">Ime:<br />
+                    <input class=\"input-large\" name=\"name\" type=\"text\" /><br />
+                </p>
+                <p class=\"text-info\">Prezime:<br />
+                    <input class=\"input-large\" name=\"surname\" type=\"text\" /><br />
+                </p>
+                <input type=\"hidden\" name=\"action\" value=\"doSearch\" />
+
+            ";
+        if($returnAddress != null){
+            echo "<input type=\"hidden\" name=\"\" value=\"{$returnAddress}\" />";
+        }
+        echo "<input class=\"btn btn-large btn-success\" value=\"Traži\" type=\"submit\" /><br />
+            </form>
         ";
     }
 }

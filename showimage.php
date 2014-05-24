@@ -31,6 +31,10 @@ if(isset($_GET['action'])){
                 )
             );
             break;
+
+        case "doTagFriend":
+
+            break;
     }
 }
 ?>
@@ -58,7 +62,7 @@ if(isset($_GET['action'])){
             if(isset($_SESSION['userLoggedIn'])){
                 if($_SESSION['userLoggedIn'] == User::$codeLoggedIn){
                     $liked = $db->hasUserLike($_GET['imageId'], $_SESSION['userId']);
-                    $htmlEngine->printUserMainMenu($_SESSION['name'], $_GET['imageId'], $liked);
+                    $htmlEngine->printUserMainMenu($_SESSION['name'], $_GET['imageId'], $liked, $_SESSION['userId']);
                 } else {
                     $htmlEngine->printLoginForm();
                 }
@@ -101,6 +105,34 @@ if(isset($_GET['action'])){
                     echo "</p>";
                 }
                 $htmlEngine->printCommentForm($_GET['imageId']);
+
+                $taggedArray = $db->getTags($_GET['imageId']);
+                if($taggedArray != null){
+                    echo "<p class=\"text-left navbar-text\">Tagirani korisnici:</p>";
+                    echo "<ul>";
+                    $count = count($taggedArray);
+                    for($i = 0; $i < $count; ++$i){
+                        echo "<li>";
+                        echo "<a href=\"showimage.php?action=doTagFriend&userId={$taggedArray[$i]->userId}\">{$taggedArray[$i]->name} {$taggedArray[$i]->surname}</a>";
+                        echo "</li>";
+                    }
+                    echo "</ul>";
+                    echo "</p>";
+                }
+
+                $usersArray = $db->getFriends($_SESSION['userId']);
+                if($usersArray != null){
+                    echo "<p class=\"text-left navbar-text\">Tagiraj korisnika:</p>";
+                    echo "<ul>";
+                    $count = count($usersArray);
+                    for($i = 0; $i < $count; ++$i){
+                        echo "<li>";
+                        echo "<a href=\"showimage.php?action=doTagFriend&userId={$usersArray[$i]->userId}\">{$usersArray[$i]->name} {$usersArray[$i]->surname}</a>";
+                        echo "</li>";
+                    }
+                    echo "</ul>";
+                    echo "</p>";
+                }
             }
             ?>
 

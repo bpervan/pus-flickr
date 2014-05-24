@@ -42,7 +42,7 @@ if(isset($_GET['action'])){
                     <?php
                     if(isset($_SESSION['userLoggedIn'])){
                         if($_SESSION['userLoggedIn'] == User::$codeLoggedIn){
-                            $htmlEngine->printUserMainMenu($_SESSION['name']);
+                            $htmlEngine->printUserMainMenu($_SESSION['name'], null, null, $_SESSION['userId']);
                         } else {
                             $htmlEngine->printLoginForm();
                         }
@@ -63,7 +63,6 @@ if(isset($_GET['action'])){
                             if(($i + 1) % 4 == 0 && ($i + 1) < $numberOfImages)
                                 echo "</tr><tr>";
                         }
-
                         ?>
                         </tr>
                     </table>

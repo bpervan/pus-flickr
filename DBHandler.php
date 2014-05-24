@@ -353,7 +353,7 @@ class DBHandler {
     public function makeFriendshipRequest($userId, $friendId){
         $friendRequests = null;
         $fetchQuery = $this->connectionHandle->prepare("SELECT friendsrequests FROM pusflickr.friendships WHERE userId = ?");
-        $fetchQuery->bindParam(1, $userId);
+        $fetchQuery->bindParam(1, $friendId);
 
         if($fetchQuery->execute()){
             if($row = $fetchQuery->fetch()){
@@ -368,11 +368,11 @@ class DBHandler {
         }
 
 
-        array_push($friendRequestsArray, $friendId);
+        array_push($friendRequestsArray, $userId);
         $friendRequests = implode(",", $friendRequestsArray);
 
 
-        $updateQuery = $this->connectionHandle->prepare("UPDATE pusflickr.friendships SET friendsrequests = '{$friendRequests}' WHERE friendships.userId = {$userId}");
+        $updateQuery = $this->connectionHandle->prepare("UPDATE pusflickr.friendships SET friendsrequests = '{$friendRequests}' WHERE friendships.userId = {$friendId}");
         try{
             $this->connectionHandle->beginTransaction();
             $updateQuery->execute();
@@ -384,4 +384,224 @@ class DBHandler {
         $this->connectionHandle->commit();
         return 0;
     }
-} 
+
+    public function getFriendshipStatus($userId, $friendId){
+
+        $fetchQuery = $this->connectionHandle->prepare("SELECT * FROM pusflickr.friendships WHERE userId = ?");
+        $fetchQuery->bindParam(1, $friendId);
+
+        if($fetchQuery->execute()){
+            if($row = $fetchQuery->fetch()){
+                $friendsArray = explode(",", $row['friends']);
+                $count = count($friendsArray);
+                for($i = 0; $i < $count; ++$i){
+                    if($friendsArray[$i] == $userId){
+                        return User::$FRIENDSHIP_FRIENDS;
+                    }
+                }
+
+                $requestsArray = explode(",", $row['friendsrequests']);
+                $count = count($requestsArray);
+                for($i = 0; $i < $count; ++$i){
+                    if($requestsArray[$i] == $userId){
+                        return User::$FRIENDSHIP_REQUESTED;
+                    }
+                }
+
+            }
+        }
+        return User::$FRIENDSHIP_NOT_FRIENDS;
+    }
+
+    public function getFriendshipRequests($userId){
+        $requestsVar = null;
+        $userArray = array();
+        $fetchQuery = $this->connectionHandle->prepare("SELECT friendsrequests FROM pusflickr.friendships WHERE userId = ?");
+        $fetchQuery->bindParam(1, $userId);
+
+        if($fetchQuery->execute()){
+            if($row = $fetchQuery->fetch()){
+                $requestsVar = $row['friendsrequests'];
+            }
+        }
+
+        if(strlen($requestsVar) === 0){
+            return null;
+        }
+
+        $requestsArray = explode(",", $requestsVar);
+        $query = "SELECT * FROM pusflickr.users WHERE userId = ";
+        $query = $query.implode(" OR userId = ", $requestsArray);
+
+        $friendshipRequestsQuery = $this->connectionHandle->prepare($query);
+        if($friendshipRequestsQuery->execute()){
+            while($row = $friendshipRequestsQuery->fetch()){
+                array_push($userArray, new User(
+                    $row['userId'],
+                    $row['name'],
+                    $row['surname'],
+                    $row['email'],
+                    $row['username']
+                ));
+            }
+            return $userArray;
+        }
+        return null;
+    }
+
+    /**
+     * @param $userId -> Currently active user
+     * @param $friendId -> Friend
+     */
+
+    public function confirmFriend($userId, $friendId){
+        $this->removeFriendshipRequest($userId, $friendId);
+        $this->insertFriendship($userId, $friendId);
+        $this->insertFriendship($friendId, $userId);
+
+        return 0;
+    }
+
+    public function denyFriend($userId, $friendId){
+        //samo makni iz requestova
+    }
+
+    private function removeFriendshipRequest($userId, $friendId){
+        $requestsVar = null;
+        $fetchQuery = $this->connectionHandle->prepare("SELECT friendsrequests FROM pusflickr.friendships WHERE userId = ?");
+        $fetchQuery->bindParam(1, $userId);
+
+        if($fetchQuery->execute()){
+            if($row = $fetchQuery->fetch()){
+                $requestsVar = $row['friendsrequests'];
+            }
+        }
+
+        $friendRequestsArray = explode(",", $requestsVar);
+        if(($i = array_search($friendId, $friendRequestsArray)) !== false){
+            unset($friendRequestsArray[$i]);
+        }
+
+        $requestsVar = implode(",", $friendRequestsArray);
+
+        $updateQuery = $this->connectionHandle->prepare("UPDATE pusflickr.friendships SET friendsrequests = '{$requestsVar}' WHERE friendships.userId = {$userId}");
+        try{
+            $this->connectionHandle->beginTransaction();
+            $updateQuery->execute();
+        } catch (PDOException $e){
+            $this->connectionHandle->rollBack();
+            echo $e->getMessage();
+            return -1;
+        }
+        $this->connectionHandle->commit();
+        return 0;
+    }
+
+    private function insertFriendship($user1, $user2){
+        $friendRequests = null;
+        $fetchQuery = $this->connectionHandle->prepare("SELECT friends FROM pusflickr.friendships WHERE userId = ?");
+        $fetchQuery->bindParam(1, $user1);
+
+        if($fetchQuery->execute()){
+            if($row = $fetchQuery->fetch()){
+                $friendRequests = $row['friends'];
+            }
+        }
+
+        if(strlen($friendRequests) >= 1){
+            $friendRequestsArray = explode(",", $friendRequests);
+        } else {
+            $friendRequestsArray = array();
+        }
+
+
+        array_push($friendRequestsArray, $user2);
+        $friendRequests = implode(",", $friendRequestsArray);
+        xdebug_var_dump($friendRequests);
+
+
+        $updateQuery = $this->connectionHandle->prepare("UPDATE pusflickr.friendships SET friends = '{$friendRequests}' WHERE friendships.userId = {$user1}");
+        try{
+            $this->connectionHandle->beginTransaction();
+            $updateQuery->execute();
+        } catch (PDOException $e){
+            $this->connectionHandle->rollBack();
+            echo $e->getMessage();
+            return -1;
+        }
+        $this->connectionHandle->commit();
+        return 0;
+    }
+
+    public function getFriends($userId){
+        $friendsVar = null;
+        $userArray = array();
+        $fetchQuery = $this->connectionHandle->prepare("SELECT friends FROM pusflickr.friendships WHERE userId = ?");
+        $fetchQuery->bindParam(1, $userId);
+
+        if($fetchQuery->execute()){
+            if($row = $fetchQuery->fetch()){
+                $friendsVar = $row['friends'];
+            }
+        }
+
+        if(strlen($friendsVar) === 0){
+            return null;
+        }
+
+        $friendsArray = explode(",", $friendsVar);
+        $query = "SELECT * FROM pusflickr.users WHERE userId = ";
+        $query = $query.implode(" OR userId = ", $friendsArray);
+
+        $friendsQuery = $this->connectionHandle->prepare($query);
+        if($friendsQuery->execute()){
+            while($row = $friendsQuery->fetch()){
+                array_push($userArray, new User(
+                    $row['userId'],
+                    $row['name'],
+                    $row['surname'],
+                    $row['email'],
+                    $row['username']
+                ));
+            }
+            return $userArray;
+        }
+        return null;
+    }
+
+    public function getTags($pictureId){
+        $tagsVar = null;
+        $userArray = array();
+        $fetchQuery = $this->connectionHandle->prepare("SELECT tags FROM pusflickr.pictures WHERE pictureId = ?");
+        $fetchQuery->bindParam(1, $pictureId);
+
+        if($fetchQuery->execute()){
+            if($row = $fetchQuery->fetch()){
+                $tagsVar = $row['tags'];
+            }
+        }
+
+        if(strlen($tagsVar) === 0){
+            return null;
+        }
+
+        $tagsArray = explode(",", $tagsVar);
+        $query = "SELECT * FROM pusflickr.users WHERE userId = ";
+        $query = $query.implode(" OR userId = ", $tagsArray);
+
+        $tagsQuery = $this->connectionHandle->prepare($query);
+        if($tagsQuery->execute()){
+            while($row = $tagsQuery->fetch()){
+                array_push($userArray, new User(
+                    $row['userId'],
+                    $row['name'],
+                    $row['surname'],
+                    $row['email'],
+                    $row['username']
+                ));
+            }
+            return $userArray;
+        }
+        return null;
+    }
+}
