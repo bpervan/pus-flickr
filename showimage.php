@@ -27,13 +27,22 @@ if(isset($_GET['action'])){
                 new Comment(
                     $_SESSION['userId'],
                     $_GET['imageId'],
-                    $_GET['comment']
+                    $_GET['comment'],
+                    null
                 )
             );
             break;
 
-        case "doTagFriend":
+        case "doDeleteComment":
+            $db->deleteComment($_GET['commentId']);
+                break;
 
+        case "doTagFriend":
+            $db->insertTag($_GET['imageId'], $_GET['userId']);
+            break;
+
+        case "doRemoveTag":
+            $db->removeTag($_GET['imageId'], $_GET['userId']);
             break;
     }
 }
@@ -91,6 +100,8 @@ if(isset($_GET['action'])){
                     echo "</p>";
                 }
 
+                //Komentar može obrisati autor komentara ili vlasnik slike
+
                 $commentsArray = $db->getComments($_GET['imageId']);
                 if($commentsArray != null){
                     echo "<p class=\"text-left navbar-text\">Komentari:";
@@ -98,7 +109,12 @@ if(isset($_GET['action'])){
                     $count = count($commentsArray);
                     for($i = 0; $i < $count; ++$i){
                         echo "<li>";
-                        echo $commentsArray[$i];
+                        if(($_SESSION['userId'] == $commentsArray[$i]->userId) || ($_SESSION['userId'] == $image->userId)){
+                            echo "<a href=\"showimage.php?action=doDeleteComment&imageId={$_GET['imageId']}&commentId={$commentsArray[$i]->commentId}\">{$commentsArray[$i]} - OBRIŠI</a>";
+                        } else {
+                            echo $commentsArray[$i];
+                        }
+
                         echo "</li>";
                     }
                     echo "</ul>";
@@ -106,6 +122,7 @@ if(isset($_GET['action'])){
                 }
                 $htmlEngine->printCommentForm($_GET['imageId']);
 
+                //Korisnik može odtagirati samog sebe, a vlasnik slike bilo koga
                 $taggedArray = $db->getTags($_GET['imageId']);
                 if($taggedArray != null){
                     echo "<p class=\"text-left navbar-text\">Tagirani korisnici:</p>";
@@ -113,25 +130,50 @@ if(isset($_GET['action'])){
                     $count = count($taggedArray);
                     for($i = 0; $i < $count; ++$i){
                         echo "<li>";
-                        echo "<a href=\"showimage.php?action=doTagFriend&userId={$taggedArray[$i]->userId}\">{$taggedArray[$i]->name} {$taggedArray[$i]->surname}</a>";
+                        //Korisnik može odtagirati samog sebe, a vlasnik slike bilo koga
+                        if(($_SESSION['userId'] == $taggedArray[$i]->userId) || ($_SESSION['userId'] == $image->userId)){
+                            echo "<a href=\"showimage.php?action=doRemoveTag&imageId={$_GET['imageId']}&userId={$taggedArray[$i]->userId}\">{$taggedArray[$i]->name} {$taggedArray[$i]->surname} - ODTAGIRAJ</a>";
+                        } else {
+                            echo "{$taggedArray[$i]->name} {$taggedArray[$i]->surname}";
+                        }
                         echo "</li>";
                     }
                     echo "</ul>";
-                    echo "</p>";
                 }
 
+
+
+
                 $usersArray = $db->getFriends($_SESSION['userId']);
-                if($usersArray != null){
+                //Dakle, imam ovdje polje mojih prijatelja i polje već tagiranih korisnika
+                //Sad treba proći kroz polje mojih prijatelja i u $offerTags dodati sve one prijatelje koji nisu u polju tagiranih korisnika
+                $offerTags = array();
+                $countUsers = count($usersArray);
+                if($taggedArray == null){
+                    $offerTags = $usersArray;
+                } else {
+                    for($i = 0; $i < $countUsers; ++$i){
+                        if(!in_array($usersArray[$i], $taggedArray)){
+                            array_push($offerTags, $usersArray[$i]);
+                        }
+                    }
+                }
+
+                //Korisnik mora moći tagirati sebe:
+                if(!$db->isUserTagged($_GET['imageId'], $_SESSION['userId'])){
+                    array_push($offerTags, User::constructCurrentUser());
+                }
+
+                if(count($offerTags) != 0){
                     echo "<p class=\"text-left navbar-text\">Tagiraj korisnika:</p>";
                     echo "<ul>";
-                    $count = count($usersArray);
+                    $count = count($offerTags);
                     for($i = 0; $i < $count; ++$i){
                         echo "<li>";
-                        echo "<a href=\"showimage.php?action=doTagFriend&userId={$usersArray[$i]->userId}\">{$usersArray[$i]->name} {$usersArray[$i]->surname}</a>";
+                        echo "<a href=\"showimage.php?action=doTagFriend&imageId={$_GET['imageId']}&userId={$offerTags[$i]->userId}\">{$offerTags[$i]->name} {$offerTags[$i]->surname} - TAGIRAJ</a>";
                         echo "</li>";
                     }
                     echo "</ul>";
-                    echo "</p>";
                 }
             }
             ?>

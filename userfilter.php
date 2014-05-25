@@ -7,13 +7,10 @@ $db = new DBHandler();
 /**
  * Created by PhpStorm.
  * User: Branimir
- * Date: 24.05.14.
- * Time: 00:59
- *
- * Case 1: Lista sve javno dostupne slike action=getPublicPhotos
- * Case 2: Lista sve javno dostupne slike nekog korisnika + njegove privatne ako je prijatelj s trenutno
- *         ulogiranim korisnikom
+ * Date: 25.05.14.
+ * Time: 17:18
  */
+
 if(isset($_GET['action'])){
     switch($_GET['action']){
         case "doLogout":
@@ -56,20 +53,21 @@ if(isset($_GET['action'])){
             ?>
         </div>
         <div class="span9">
-            <p class="text-center text-info btn-large">JAVNE SLIKE</p>
-            <table class="table-bordered">
-                <tr>
-                    <?php
-                    $publicImages = $db->getPublicImages();
-                    $numberOfImages = count($publicImages);
-                    for($i = 0; $i < $numberOfImages; ++$i){
-                        echo "<td><a href=\"showimage.php?imageId={$publicImages[$i]->pictureId}\"><img class=\"img-polaroid\" src=\"images/thumbnails/{$publicImages[$i]->url}\" alt=\"{$publicImages[$i]->description}\" /></a></td>";
-                        if(($i + 1) % 4 == 0 && ($i + 1) < $numberOfImages)
-                            echo "</tr><tr>";
-                    }
-                    ?>
-                </tr>
-            </table>
+            <?php
+            $usersArray = $db->getSystemUsers();
+            if($usersArray != null){
+                echo "<p class=\"text-left navbar-text\">Svi korisnici sustava:";
+                echo "<ul>";
+                $count = count($usersArray);
+                for($i = 0; $i < $count; ++$i){
+                    echo "<li>";
+                    echo "<a href=\"showuser.php?userId={$usersArray[$i]->userId}\">{$usersArray[$i]}</a>";
+                    echo "</li>";
+                }
+                echo "</ul>";
+                echo "</p>";
+            }
+            ?>
         </div>
     </div>
 </div>

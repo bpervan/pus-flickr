@@ -85,10 +85,8 @@ class HTMLEngine {
         echo"
             <ul class=\"nav nav-list\">
                 <li class=\"nav-header\">Trenutno prijavljen: {$name}</li>
-                <li><a href=\"#\">Pregledaj popis prijatelja</a></li>
-                <li><a href=\"#\">Pregledaj svoje slike</a></li>
-                <li><a href=\"#\">Pregledaj slike prijatelja</a></li>
-                <li><a href=\"#\">Pregledaj javno dostupne slike</a></li>
+                <li><a href=\"userfilter.php\">Pregledaj popis korisnika</a></li>
+                <li><a href=\"imagefilter.php?action=getPublicPhotos\">Pregledaj javno dostupne slike</a></li>
                 <li><a href=\"search.php\">Pretraga korisnika</a></li>
                 <li><a href=\"showuser.php?userId={$userId}\">Pogledaj svoj profil</a></li>
             ";
@@ -112,10 +110,8 @@ class HTMLEngine {
         echo"
             <ul class=\"nav nav-list\">
                 <li class=\"nav-header\">Trenutno prijavljen: {$name}</li>
-                <li><a href=\"#\">Pregledaj popis prijatelja</a></li>
-                <li><a href=\"#\">Pregledaj svoje slike</a></li>
-                <li><a href=\"#\">Pregledaj slike prijatelja</a></li>
-                <li><a href=\"#\">Pregledaj javno dostupne slike</a></li>
+                <li><a href=\"userfilter.php\">Pregledaj popis korisnika</a></li>
+                <li><a href=\"imagefilter.php?action=getPublicPhotos\">Pregledaj javno dostupne slike</a></li>
                 <li><a href=\"search.php\">Pretraga korisnika</a></li>
             ";
 

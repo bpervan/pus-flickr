@@ -42,12 +42,28 @@ class DBHandler {
         return null;
     }
 
-    public function insertImageToDatabase($pictureId, $userId, $url, $name, $description){
+    public function getSystemUsers(){
+        $usersArray = array();
+        $fetchQuery = $this->connectionHandle->prepare("SELECT * FROM pusflickr.users");
+        if($fetchQuery->execute()){
+            while($row = $fetchQuery->fetch()){
+                array_push($usersArray, new User(
+                    $row['userId'],
+                    $row['name'],
+                    $row['surname'],
+                    $row['email'],
+                    $row['username']
+                ));
+            }
+        }
+        return $usersArray;
+    }
+
+    public function insertImageToDatabase($pictureId, $userId, $url, $name, $description, $privacy = 0){
         $insertQuery = $this->connectionHandle->prepare(
             "INSERT INTO pusflickr.pictures (pictureId, userId, url, name, description, privacy)
             VALUES (?,?,?,?,?,?)"
         );
-        $privacy = 0;
 
         $insertQuery->bindParam(1, $pictureId);
         $insertQuery->bindParam(2, $userId);
@@ -89,6 +105,8 @@ class DBHandler {
             VALUES (?,?,?,?,?,?)"
         );
 
+        // tu još treba inicijalizirati dio tablice za prijateljstva
+
         $insertQuery->bindParam(1, $user->userId);
         $insertQuery->bindParam(2, $user->username);
         $insertQuery->bindParam(3, $password);
@@ -103,6 +121,25 @@ class DBHandler {
             return -1;
         }
         $this->connectionHandle->commit();
+
+
+        $insertQuery = $this->connectionHandle->prepare(
+            "INSERT INTO pusflickr.friendships (userId, friends, friendsrequests, friendsrequested)
+            VALUES (?,?,?,?)");
+        $emptyString = "";
+        $insertQuery->bindParam(1, $user->userId);
+        $insertQuery->bindParam(2, $emptyString);
+        $insertQuery->bindParam(3, $emptyString);
+        $insertQuery->bindParam(4, $emptyString);
+        try{
+            $this->connectionHandle->beginTransaction();
+            $insertQuery->execute();
+        } catch (PDOException $e){
+            $this->connectionHandle->rollBack();
+            return -1;
+        }
+        $this->connectionHandle->commit();
+
         return 0;
     }
 
@@ -125,6 +162,54 @@ class DBHandler {
             }
         }
         return $retval;
+    }
+
+    public function getPublicImages(){
+        $retval = array();
+
+        $fetchQuery = $this->connectionHandle->prepare("SELECT * FROM pusflickr.pictures WHERE privacy = 0");
+        if($fetchQuery->execute()){
+            while($row = $fetchQuery->fetch()){
+                array_push($retval,
+                    new Image(
+                        $row['pictureId'],
+                        $row['userId'],
+                        $row['likes'],
+                        $row['url'],
+                        $row['name'],
+                        $row['description'],
+                        $row['privacy']
+                    ));
+            }
+        }
+        return $retval;
+    }
+
+    public function getImagesForProfile($userProfileId, $currentlyLoggedUserId){
+
+        $picturesArray = array();
+        $fetchQuery = $this->connectionHandle->prepare("SELECT pictures.*, friendships.friends FROM pusflickr.pictures
+            INNER JOIN pusflickr.friendships ON pictures.userId = friendships.userId WHERE pictures.userId = ?");
+
+        $fetchQuery->bindParam(1, $userProfileId);
+
+        if($fetchQuery->execute()){
+            while($row = $fetchQuery->fetch()){
+                $friends = explode(",", $row['friends']);
+                if(($row['userId'] == $currentlyLoggedUserId) || (in_array($currentlyLoggedUserId, $friends) || ($row['privacy'] == 0))){
+                    array_push($picturesArray,new Image(
+                        $row['pictureId'],
+                        $row['userId'],
+                        $row['likes'],
+                        $row['url'],
+                        $row['name'],
+                        $row['description'],
+                        $row['privacy']
+                    ));
+                }
+            }
+        }
+        return $picturesArray;
     }
 
     public function getImage($id){
@@ -322,13 +407,30 @@ class DBHandler {
                 $image = new Comment(
                     $row['userId'],
                     $row['pictureId'],
-                    $row['comment']
+                    $row['comment'],
+                    $row['commentId']
                 );
                 array_push($retVal, $image);
             }
             return $retVal;
         }
         return null;
+    }
+
+    public function deleteComment($commentId){
+        $deleteQuery = $this->connectionHandle->prepare("DELETE FROM pusflickr.comments WHERE comments.commentId = ?");
+        $deleteQuery->bindParam(1, $commentId);
+
+        try{
+            $this->connectionHandle->beginTransaction();
+            $deleteQuery->execute();
+        } catch (PDOException $e){
+            xdebug_var_dump($e);
+            $this->connectionHandle->rollBack();
+            return -1;
+        }
+        $this->connectionHandle->commit();
+        return 0;
     }
 
     public function getUser($userId){
@@ -603,5 +705,84 @@ class DBHandler {
             return $userArray;
         }
         return null;
+    }
+
+    public function insertTag($imageId, $userId){
+        $tagVar = null;
+        $fetchQuery = $this->connectionHandle->prepare("SELECT tags FROM pusflickr.pictures WHERE pictureId = ?");
+        $fetchQuery->bindParam(1, $imageId);
+
+        if($fetchQuery->execute()){
+            if($row = $fetchQuery->fetch()){
+                $tagVar = $row['tags'];
+            }
+        }
+
+        if(strlen($tagVar) >= 1){
+            $tagArray = explode(",", $tagVar);
+        } else {
+            $tagArray = array();
+        }
+
+
+        array_push($tagArray, $userId);
+        $tagVar = implode(",", $tagArray);
+
+
+        $updateQuery = $this->connectionHandle->prepare("UPDATE pusflickr.pictures SET tags = '{$tagVar}' WHERE pictures.pictureId = {$imageId}");
+        try{
+            $this->connectionHandle->beginTransaction();
+            $updateQuery->execute();
+        } catch (PDOException $e){
+            $this->connectionHandle->rollBack();
+            echo $e->getMessage();
+            return -1;
+        }
+        $this->connectionHandle->commit();
+        return 0;
+    }
+
+    public function removeTag($imageId, $userId){
+        $tagVar = null;
+        $fetchQuery = $this->connectionHandle->prepare("SELECT tags FROM pusflickr.pictures WHERE pictureId = ?");
+        $fetchQuery->bindParam(1, $imageId);
+
+        if($fetchQuery->execute()){
+            if($row = $fetchQuery->fetch()){
+                $tagVar = $row['tags'];
+            }
+        }
+
+        $tagArray = explode(",", $tagVar);
+
+        if(($i = array_search($userId, $tagArray)) !== false){
+            unset($tagArray[$i]);
+        }
+
+        $tagVar = implode(",", $tagArray);
+
+
+        $updateQuery = $this->connectionHandle->prepare("UPDATE pusflickr.pictures SET tags = '{$tagVar}' WHERE pictures.pictureId = {$imageId}");
+        try{
+            $this->connectionHandle->beginTransaction();
+            $updateQuery->execute();
+        } catch (PDOException $e){
+            $this->connectionHandle->rollBack();
+            echo $e->getMessage();
+            return -1;
+        }
+        $this->connectionHandle->commit();
+        return 0;
+    }
+
+    public function isUserTagged($imageId, $userId){
+        $tagArray = $this->getTags($imageId);
+        $count = count($tagArray);
+        for($i = 0; $i < $count; ++$i){
+            if($userId == $tagArray[$i]->userId){
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -25,12 +25,26 @@ class User {
         $this->userId = $userId;
     }
 
+    public static function constructCurrentUser(){
+        return new User(
+            $_SESSION['userId'],
+            $_SESSION['name'],
+            $_SESSION['surname'],
+            $_SESSION['email'],
+            $_SESSION['username']
+        );
+    }
+
     public static $ERROR_WRONG_USERNAME = -2;
     public static $ERROR_WRONG_PASSWORD = -3;
 
     public static $FRIENDSHIP_REQUESTED = 2;
     public static $FRIENDSHIP_FRIENDS = 3;
     public static $FRIENDSHIP_NOT_FRIENDS = 4;
+
+    public function __toString(){
+        return $this->name . " " . $this->surname;
+    }
 
     public $error = array();
 }

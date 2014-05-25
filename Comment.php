@@ -11,11 +11,13 @@ class Comment {
     public $userId;
     public $imageId;
     public $comment;
+    public $commentId;
 
-    public function __construct($userId, $imageId, $comment){
+    public function __construct($userId, $imageId, $comment, $commentId){
         $this->userId = $userId;
         $this->imageId = $imageId;
         $this->comment = $comment;
+        $this->commentId = $commentId;
     }
 
     public function __toString(){

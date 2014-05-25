@@ -66,8 +66,13 @@ class UploadEngine {
         }
 
         $this->createThumbnail($_FILES['image']['name']);
-        $this->insertToDB($_SESSION['userId'], basename($_FILES['image']['name']), $_POST['name'], $_POST['description']);
-        //xdebug_var_dump($uploadFile);
+        if(isset($_POST['private'])){
+            $privacy = 1;
+        } else {
+            $privacy = 0;
+        }
+        $this->insertToDB($_SESSION['userId'], basename($_FILES['image']['name']), $_POST['name'], $_POST['description'], $privacy);
+        xdebug_var_dump($_POST);
     }
 
     private function createThumbnail($fileName){
@@ -97,12 +102,11 @@ class UploadEngine {
         }
     }
 
-    private function insertToDB($userId, $fileName, $imageName, $imageDescription){
+    private function insertToDB($userId, $fileName, $imageName, $imageDescription, $private){
         $db = new DBHandler();
         $pictureId = $db->getLastPictureId();
         $pictureId++;
-
-        $db->insertImageToDatabase($pictureId, $userId,$fileName,$imageName,$imageDescription);
+        $db->insertImageToDatabase($pictureId, $userId,$fileName,$imageName,$imageDescription, $private);
     }
 
 } 

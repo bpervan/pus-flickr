@@ -23,7 +23,8 @@ if(isset($_GET['action'])){
             $db->confirmFriend($_SESSION['userId'], $_GET['userId']);
             break;
         case "doDenyFriendship":
-
+            //NIJE TESTIRANO
+            $db->denyFriend($_SESSION['userId'], $_GET['userId']);
             break;
     }
 }
@@ -92,6 +93,16 @@ if(isset($_GET['action'])){
                         }
                         echo "</ul>";
                     }
+                }
+                echo "<p class=\"text-center text-info\">Sve fotogravije ovog korisnika:</p>";
+                echo "<p class=\"text-center text-info\">(Javno vidljive ili private ako su korisnici prijatelji)</p>";
+                //Ovdje prikazujem sve slike nekog korisnika koje su ili javne ili ih imam pravo vidjeti(prijateljstvo)
+                $userImages = $db->getImagesForProfile($_GET['userId'], $_SESSION['userId']);
+                $numberOfImages = count($userImages);
+                for($i = 0; $i < $numberOfImages; ++$i){
+                    echo "<td><a href=\"showimage.php?imageId={$userImages[$i]->pictureId}\"><img class=\"img-polaroid\" src=\"images/thumbnails/{$userImages[$i]->url}\" alt=\"{$userImages[$i]->description}\" /></a></td>";
+                    if(($i + 1) % 4 == 0 && ($i + 1) < $numberOfImages)
+                        echo "</tr><tr>";
                 }
             }
             ?>
