@@ -73,6 +73,16 @@ class DBHandler {
         $updateQuery->bindParam(2, $picture->name);
         $updateQuery->bindParam(3, $picture->description);
         $updateQuery->bindParam(4, $picture->pictureId);
+
+        try{
+            $this->connectionHandle->beginTransaction();
+            $updateQuery->execute();
+        } catch (PDOException $e){
+            $this->connectionHandle->rollBack();
+            return -1;
+        }
+        $this->connectionHandle->commit();
+        return 0;
     }
 
     public function deleteUser(User $user){
@@ -149,6 +159,9 @@ class DBHandler {
         $fetchQuery = $this->connectionHandle->prepare("SELECT * FROM pusflickr.pictures WHERE pictures.pictureId = ?");
         $fetchQuery->bindParam(1, $pictureId);
         if($fetchQuery->execute()){
+            if($fetchQuery->rowCount() == 0){
+                return null;
+            }
             $row = $fetchQuery->fetch();
             $retImage = new Image(
                 $pictureId,

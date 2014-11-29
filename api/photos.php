@@ -105,9 +105,10 @@ class Photos{
     private function doPut(){
         if(isset($this->methodVars['photoId']) && isset($this->methodVars['username']) && isset($this->methodVars['password'])){
             $user = $this->dbHandler->checkUser($this->methodVars['username'], sha1($this->methodVars['password']));
-            if(is_null($user)){
+            if(!is_null($user)){
                 //user postoji,
                 $photo = $this->dbHandler->getPicture($this->methodVars['photoId']);
+                //xdebug_var_dump($photo);
                 if(is_null($photo)){
                     //kreiramo sliku
                     $this->dbHandler->insertImageToDatabase(
@@ -140,7 +141,7 @@ class Photos{
                 }
             } else {
                 //user ne postoji, unauthorized
-                $response = array("StatusCode" => 302, "StatusMessage" => "Unauthorized", $this->methodVars);
+                $response = array("StatusCode" => 1234, "StatusMessage" => "Unauthorized", $this->methodVars);
             }
 
         } else {

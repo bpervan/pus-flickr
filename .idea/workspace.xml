@@ -40,8 +40,8 @@
       <file leaf-file-name="photos.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/photos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7050971" vertical-offset="1697" max-vertical-offset="3128">
-              <caret line="134" column="64" selection-start-line="134" selection-start-column="64" selection-end-line="134" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.35436893" vertical-offset="1680" max-vertical-offset="3145">
+              <caret line="116" column="49" selection-start-line="116" selection-start-column="49" selection-end-line="116" selection-end-column="49" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
               </folding>
@@ -52,57 +52,57 @@
       <file leaf-file-name="DBHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.518518" vertical-offset="636" max-vertical-offset="15946">
-              <caret line="74" column="54" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
+            <state vertical-scroll-proportion="-14.538462" vertical-offset="2376" max-vertical-offset="16167">
+              <caret line="162" column="28" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
               <folding>
-                <marker date="1417271760063" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
-                <marker date="1417271760063" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
-                <marker date="1417271760063" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
-                <marker date="1417271760063" expanded="true" signature="2696:2745" placeholder="DELETE FROM ..." />
-                <marker date="1417271760063" expanded="true" signature="2696:2746" placeholder="DELETE FROM ..." />
-                <marker date="1417271760063" expanded="true" signature="3251:3307" placeholder="DELETE FROM ..." />
-                <marker date="1417271760063" expanded="true" signature="3862:3921" placeholder="DELETE FROM ..." />
-                <marker date="1417271760063" expanded="true" signature="4478:4510" placeholder="SELECT * FRO..pictures..." />
-                <marker date="1417271760063" expanded="true" signature="5116:5177" placeholder="SELECT * FRO..pictures..." />
-                <marker date="1417271760063" expanded="true" signature="5754:5783" placeholder="SELECT * FRO..users..." />
-                <marker date="1417271760063" expanded="true" signature="6354:6470" placeholder="INSERT INTO ..." />
-                <marker date="1417271760063" expanded="true" signature="6895:6967" placeholder="SELECT pictu..pictures..." />
-                <marker date="1417271760063" expanded="true" signature="7283:7346" placeholder="SELECT userI..users..." />
-                <marker date="1417271760063" expanded="true" signature="7691:7802" placeholder="INSERT INTO ..." />
-                <marker date="1417271760063" expanded="true" signature="8527:8642" placeholder="INSERT INTO ..." />
-                <marker date="1417271760063" expanded="true" signature="9292:9350" placeholder="SELECT * FRO..pictures..." />
-                <marker date="1417271760063" expanded="true" signature="9985:10035" placeholder="SELECT * FRO..pictures..." />
-                <marker date="1417271760063" expanded="true" signature="10723:10896" placeholder="SELECT pictu..pictures..." />
-                <marker date="1417271760063" expanded="true" signature="11819:11915" placeholder="SELECT pictu..pictures..." />
-                <marker date="1417271760063" expanded="true" signature="12532:12584" placeholder="SELECT * FRO..pictures..." />
-                <marker date="1417271760063" expanded="true" signature="13235:13291" placeholder="SELECT likes..pictures..." />
-                <marker date="1417271760063" expanded="true" signature="13789:13868" placeholder="UPDATE pusfl..." />
-                <marker date="1417271760063" expanded="true" signature="14342:14398" placeholder="SELECT likes..pictures..." />
-                <marker date="1417271760063" expanded="true" signature="14863:14942" placeholder="UPDATE pusfl..." />
-                <marker date="1417271760063" expanded="true" signature="15534:15590" placeholder="SELECT likes..pictures..." />
-                <marker date="1417271760063" expanded="true" signature="15927:15971" placeholder="SELECT * FRO..users..." />
-                <marker date="1417271760063" expanded="true" signature="17140:17212" placeholder="SELECT comme..comments..." />
-                <marker date="1417271760063" expanded="true" signature="17629:17728" placeholder="INSERT INTO ..." />
-                <marker date="1417271760063" expanded="true" signature="18375:18451" placeholder="SELECT * FRO..comments..." />
-                <marker date="1417271760063" expanded="true" signature="19021:19080" placeholder="DELETE FROM ..." />
-                <marker date="1417271760063" expanded="true" signature="19552:19598" placeholder="SELECT * FRO..users..." />
-                <marker date="1417271760063" expanded="true" signature="20193:20259" placeholder="SELECT frien..friendships..." />
-                <marker date="1417271760063" expanded="true" signature="20828:20926" placeholder="UPDATE pusfl..." />
-                <marker date="1417271760063" expanded="true" signature="21386:21438" placeholder="SELECT * FRO..friendships..." />
-                <marker date="1417271760063" expanded="true" signature="22449:22515" placeholder="SELECT frien..friendships..." />
-                <marker date="1417271760063" expanded="true" signature="22873:22917" placeholder="SELECT * FRO..users..." />
-                <marker date="1417271760063" expanded="true" signature="24096:24162" placeholder="SELECT frien..friendships..." />
-                <marker date="1417271760063" expanded="true" signature="24681:24776" placeholder="UPDATE pusfl..." />
-                <marker date="1417271760063" expanded="true" signature="25259:25317" placeholder="SELECT frien..friendships..." />
-                <marker date="1417271760063" expanded="true" signature="25916:26006" placeholder="UPDATE pusfl..." />
-                <marker date="1417271760063" expanded="true" signature="26500:26558" placeholder="SELECT frien..friendships..." />
-                <marker date="1417271760063" expanded="true" signature="26904:26948" placeholder="SELECT * FRO..users..." />
-                <marker date="1417271760063" expanded="true" signature="27655:27710" placeholder="SELECT tags ..pictures..." />
-                <marker date="1417271760063" expanded="true" signature="28044:28088" placeholder="SELECT * FRO..users..." />
-                <marker date="1417271760063" expanded="true" signature="28761:28816" placeholder="SELECT tags ..pictures..." />
-                <marker date="1417271760063" expanded="true" signature="29297:29373" placeholder="UPDATE pusfl..." />
-                <marker date="1417271760063" expanded="true" signature="29844:29899" placeholder="SELECT tags ..pictures..." />
-                <marker date="1417271760063" expanded="true" signature="30349:30425" placeholder="UPDATE pusfl..." />
+                <marker date="1417272804207" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
+                <marker date="1417272804207" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
+                <marker date="1417272804207" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
+                <marker date="1417272804207" expanded="true" signature="2982:3031" placeholder="DELETE FROM ..." />
+                <marker date="1417272804207" expanded="true" signature="2982:3032" placeholder="DELETE FROM ..." />
+                <marker date="1417272804207" expanded="true" signature="3537:3593" placeholder="DELETE FROM ..." />
+                <marker date="1417272804207" expanded="true" signature="4148:4207" placeholder="DELETE FROM ..." />
+                <marker date="1417272804207" expanded="true" signature="4764:4796" placeholder="SELECT * FRO..pictures..." />
+                <marker date="1417272804207" expanded="true" signature="5402:5463" placeholder="SELECT * FRO..pictures..." />
+                <marker date="1417272804207" expanded="true" signature="6129:6158" placeholder="SELECT * FRO..users..." />
+                <marker date="1417272804207" expanded="true" signature="6729:6845" placeholder="INSERT INTO ..." />
+                <marker date="1417272804207" expanded="true" signature="7270:7342" placeholder="SELECT pictu..pictures..." />
+                <marker date="1417272804207" expanded="true" signature="7658:7721" placeholder="SELECT userI..users..." />
+                <marker date="1417272804207" expanded="true" signature="8066:8177" placeholder="INSERT INTO ..." />
+                <marker date="1417272804207" expanded="true" signature="8902:9017" placeholder="INSERT INTO ..." />
+                <marker date="1417272804207" expanded="true" signature="9667:9725" placeholder="SELECT * FRO..pictures..." />
+                <marker date="1417272804207" expanded="true" signature="10360:10410" placeholder="SELECT * FRO..pictures..." />
+                <marker date="1417272804207" expanded="true" signature="11098:11271" placeholder="SELECT pictu..pictures..." />
+                <marker date="1417272804207" expanded="true" signature="12194:12290" placeholder="SELECT pictu..pictures..." />
+                <marker date="1417272804207" expanded="true" signature="12907:12959" placeholder="SELECT * FRO..pictures..." />
+                <marker date="1417272804207" expanded="true" signature="13610:13666" placeholder="SELECT likes..pictures..." />
+                <marker date="1417272804207" expanded="true" signature="14164:14243" placeholder="UPDATE pusfl..." />
+                <marker date="1417272804207" expanded="true" signature="14717:14773" placeholder="SELECT likes..pictures..." />
+                <marker date="1417272804207" expanded="true" signature="15238:15317" placeholder="UPDATE pusfl..." />
+                <marker date="1417272804207" expanded="true" signature="15909:15965" placeholder="SELECT likes..pictures..." />
+                <marker date="1417272804207" expanded="true" signature="16302:16346" placeholder="SELECT * FRO..users..." />
+                <marker date="1417272804207" expanded="true" signature="17515:17587" placeholder="SELECT comme..comments..." />
+                <marker date="1417272804207" expanded="true" signature="18004:18103" placeholder="INSERT INTO ..." />
+                <marker date="1417272804207" expanded="true" signature="18750:18826" placeholder="SELECT * FRO..comments..." />
+                <marker date="1417272804207" expanded="true" signature="19396:19455" placeholder="DELETE FROM ..." />
+                <marker date="1417272804207" expanded="true" signature="19927:19973" placeholder="SELECT * FRO..users..." />
+                <marker date="1417272804207" expanded="true" signature="20568:20634" placeholder="SELECT frien..friendships..." />
+                <marker date="1417272804207" expanded="true" signature="21203:21301" placeholder="UPDATE pusfl..." />
+                <marker date="1417272804207" expanded="true" signature="21761:21813" placeholder="SELECT * FRO..friendships..." />
+                <marker date="1417272804207" expanded="true" signature="22824:22890" placeholder="SELECT frien..friendships..." />
+                <marker date="1417272804207" expanded="true" signature="23248:23292" placeholder="SELECT * FRO..users..." />
+                <marker date="1417272804207" expanded="true" signature="24471:24537" placeholder="SELECT frien..friendships..." />
+                <marker date="1417272804207" expanded="true" signature="25056:25151" placeholder="UPDATE pusfl..." />
+                <marker date="1417272804207" expanded="true" signature="25634:25692" placeholder="SELECT frien..friendships..." />
+                <marker date="1417272804207" expanded="true" signature="26291:26381" placeholder="UPDATE pusfl..." />
+                <marker date="1417272804207" expanded="true" signature="26875:26933" placeholder="SELECT frien..friendships..." />
+                <marker date="1417272804207" expanded="true" signature="27279:27323" placeholder="SELECT * FRO..users..." />
+                <marker date="1417272804207" expanded="true" signature="28030:28085" placeholder="SELECT tags ..pictures..." />
+                <marker date="1417272804207" expanded="true" signature="28419:28463" placeholder="SELECT * FRO..users..." />
+                <marker date="1417272804207" expanded="true" signature="29136:29191" placeholder="SELECT tags ..pictures..." />
+                <marker date="1417272804207" expanded="true" signature="29672:29748" placeholder="UPDATE pusfl..." />
+                <marker date="1417272804207" expanded="true" signature="30219:30274" placeholder="SELECT tags ..pictures..." />
+                <marker date="1417272804207" expanded="true" signature="30724:30800" placeholder="UPDATE pusfl..." />
               </folding>
             </state>
           </provider>
@@ -375,54 +375,54 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="11807" max-vertical-offset="13481">
           <caret line="396" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1417271760063" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="2696:2745" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="2696:2746" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="3251:3307" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="3862:3921" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="4478:4510" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="5116:5177" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="5754:5783" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="6354:6470" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="6895:6967" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="7283:7346" placeholder="SELECT userI..users..." />
-            <marker date="1417271760063" expanded="true" signature="7691:7802" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="8527:8642" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="9292:9350" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="9985:10035" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="10723:10896" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="11819:11915" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="12532:12584" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="13235:13291" placeholder="SELECT likes..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="13789:13868" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="14342:14398" placeholder="SELECT likes..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="14863:14942" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="15534:15590" placeholder="SELECT likes..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="15927:15971" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="17140:17212" placeholder="SELECT comme..comments..." />
-            <marker date="1417271760063" expanded="true" signature="17629:17728" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="18375:18451" placeholder="SELECT * FRO..comments..." />
-            <marker date="1417271760063" expanded="true" signature="19021:19080" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="19552:19598" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="20193:20259" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="20828:20926" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="21386:21438" placeholder="SELECT * FRO..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="22449:22515" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="22873:22917" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="24096:24162" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="24681:24776" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="25259:25317" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="25916:26006" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="26500:26558" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="26904:26948" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="27655:27710" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="28044:28088" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="28761:28816" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="29297:29373" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="29844:29899" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="30349:30425" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="2982:3031" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="2982:3032" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="3537:3593" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="4148:4207" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="4764:4796" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="5402:5463" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="6129:6158" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="6729:6845" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="7270:7342" placeholder="SELECT pictu..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="7658:7721" placeholder="SELECT userI..users..." />
+            <marker date="1417272804207" expanded="true" signature="8066:8177" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="8902:9017" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="9667:9725" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="10360:10410" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="11098:11271" placeholder="SELECT pictu..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="12194:12290" placeholder="SELECT pictu..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="12907:12959" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="13610:13666" placeholder="SELECT likes..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="14164:14243" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="14717:14773" placeholder="SELECT likes..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="15238:15317" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="15909:15965" placeholder="SELECT likes..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="16302:16346" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="17515:17587" placeholder="SELECT comme..comments..." />
+            <marker date="1417272804207" expanded="true" signature="18004:18103" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="18750:18826" placeholder="SELECT * FRO..comments..." />
+            <marker date="1417272804207" expanded="true" signature="19396:19455" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="19927:19973" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="20568:20634" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="21203:21301" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="21761:21813" placeholder="SELECT * FRO..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="22824:22890" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="23248:23292" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="24471:24537" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="25056:25151" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="25634:25692" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="26291:26381" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="26875:26933" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="27279:27323" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="28030:28085" placeholder="SELECT tags ..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="28419:28463" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="29136:29191" placeholder="SELECT tags ..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="29672:29748" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="30219:30274" placeholder="SELECT tags ..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="30724:30800" placeholder="UPDATE pusfl..." />
           </folding>
         </state>
       </provider>
@@ -504,54 +504,54 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="6597" max-vertical-offset="13481">
           <caret line="432" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1417271760063" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="2696:2745" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="2696:2746" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="3251:3307" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="3862:3921" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="4478:4510" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="5116:5177" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="5754:5783" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="6354:6470" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="6895:6967" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="7283:7346" placeholder="SELECT userI..users..." />
-            <marker date="1417271760063" expanded="true" signature="7691:7802" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="8527:8642" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="9292:9350" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="9985:10035" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="10723:10896" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="11819:11915" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="12532:12584" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="13235:13291" placeholder="SELECT likes..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="13789:13868" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="14342:14398" placeholder="SELECT likes..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="14863:14942" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="15534:15590" placeholder="SELECT likes..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="15927:15971" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="17140:17212" placeholder="SELECT comme..comments..." />
-            <marker date="1417271760063" expanded="true" signature="17629:17728" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="18375:18451" placeholder="SELECT * FRO..comments..." />
-            <marker date="1417271760063" expanded="true" signature="19021:19080" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="19552:19598" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="20193:20259" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="20828:20926" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="21386:21438" placeholder="SELECT * FRO..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="22449:22515" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="22873:22917" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="24096:24162" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="24681:24776" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="25259:25317" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="25916:26006" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="26500:26558" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="26904:26948" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="27655:27710" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="28044:28088" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="28761:28816" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="29297:29373" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="29844:29899" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="30349:30425" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="2982:3031" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="2982:3032" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="3537:3593" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="4148:4207" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="4764:4796" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="5402:5463" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="6129:6158" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="6729:6845" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="7270:7342" placeholder="SELECT pictu..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="7658:7721" placeholder="SELECT userI..users..." />
+            <marker date="1417272804207" expanded="true" signature="8066:8177" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="8902:9017" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="9667:9725" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="10360:10410" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="11098:11271" placeholder="SELECT pictu..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="12194:12290" placeholder="SELECT pictu..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="12907:12959" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="13610:13666" placeholder="SELECT likes..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="14164:14243" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="14717:14773" placeholder="SELECT likes..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="15238:15317" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="15909:15965" placeholder="SELECT likes..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="16302:16346" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="17515:17587" placeholder="SELECT comme..comments..." />
+            <marker date="1417272804207" expanded="true" signature="18004:18103" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="18750:18826" placeholder="SELECT * FRO..comments..." />
+            <marker date="1417272804207" expanded="true" signature="19396:19455" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="19927:19973" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="20568:20634" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="21203:21301" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="21761:21813" placeholder="SELECT * FRO..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="22824:22890" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="23248:23292" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="24471:24537" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="25056:25151" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="25634:25692" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="26291:26381" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="26875:26933" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="27279:27323" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="28030:28085" placeholder="SELECT tags ..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="28419:28463" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="29136:29191" placeholder="SELECT tags ..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="29672:29748" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="30219:30274" placeholder="SELECT tags ..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="30724:30800" placeholder="UPDATE pusfl..." />
           </folding>
         </state>
       </provider>
@@ -631,54 +631,54 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="748">
           <caret line="36" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1417271760063" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="2696:2745" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="2696:2746" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="3251:3307" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="3862:3921" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="4478:4510" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="5116:5177" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="5754:5783" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="6354:6470" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="6895:6967" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="7283:7346" placeholder="SELECT userI..users..." />
-            <marker date="1417271760063" expanded="true" signature="7691:7802" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="8527:8642" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="9292:9350" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="9985:10035" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="10723:10896" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="11819:11915" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="12532:12584" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="13235:13291" placeholder="SELECT likes..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="13789:13868" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="14342:14398" placeholder="SELECT likes..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="14863:14942" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="15534:15590" placeholder="SELECT likes..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="15927:15971" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="17140:17212" placeholder="SELECT comme..comments..." />
-            <marker date="1417271760063" expanded="true" signature="17629:17728" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="18375:18451" placeholder="SELECT * FRO..comments..." />
-            <marker date="1417271760063" expanded="true" signature="19021:19080" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="19552:19598" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="20193:20259" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="20828:20926" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="21386:21438" placeholder="SELECT * FRO..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="22449:22515" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="22873:22917" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="24096:24162" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="24681:24776" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="25259:25317" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="25916:26006" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="26500:26558" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="26904:26948" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="27655:27710" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="28044:28088" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="28761:28816" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="29297:29373" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="29844:29899" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="30349:30425" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="2982:3031" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="2982:3032" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="3537:3593" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="4148:4207" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="4764:4796" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="5402:5463" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="6129:6158" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="6729:6845" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="7270:7342" placeholder="SELECT pictu..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="7658:7721" placeholder="SELECT userI..users..." />
+            <marker date="1417272804207" expanded="true" signature="8066:8177" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="8902:9017" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="9667:9725" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="10360:10410" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="11098:11271" placeholder="SELECT pictu..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="12194:12290" placeholder="SELECT pictu..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="12907:12959" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="13610:13666" placeholder="SELECT likes..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="14164:14243" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="14717:14773" placeholder="SELECT likes..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="15238:15317" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="15909:15965" placeholder="SELECT likes..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="16302:16346" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="17515:17587" placeholder="SELECT comme..comments..." />
+            <marker date="1417272804207" expanded="true" signature="18004:18103" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="18750:18826" placeholder="SELECT * FRO..comments..." />
+            <marker date="1417272804207" expanded="true" signature="19396:19455" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="19927:19973" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="20568:20634" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="21203:21301" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="21761:21813" placeholder="SELECT * FRO..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="22824:22890" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="23248:23292" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="24471:24537" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="25056:25151" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="25634:25692" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="26291:26381" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="26875:26933" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="27279:27323" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="28030:28085" placeholder="SELECT tags ..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="28419:28463" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="29136:29191" placeholder="SELECT tags ..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="29672:29748" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="30219:30274" placeholder="SELECT tags ..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="30724:30800" placeholder="UPDATE pusfl..." />
           </folding>
         </state>
       </provider>
@@ -889,65 +889,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.518518" vertical-offset="636" max-vertical-offset="15946">
-          <caret line="74" column="54" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
+        <state vertical-scroll-proportion="-14.538462" vertical-offset="2376" max-vertical-offset="16167">
+          <caret line="162" column="28" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
           <folding>
-            <marker date="1417271760063" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="2696:2745" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="2696:2746" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="3251:3307" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="3862:3921" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="4478:4510" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="5116:5177" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="5754:5783" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="6354:6470" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="6895:6967" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="7283:7346" placeholder="SELECT userI..users..." />
-            <marker date="1417271760063" expanded="true" signature="7691:7802" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="8527:8642" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="9292:9350" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="9985:10035" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="10723:10896" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="11819:11915" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="12532:12584" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="13235:13291" placeholder="SELECT likes..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="13789:13868" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="14342:14398" placeholder="SELECT likes..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="14863:14942" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="15534:15590" placeholder="SELECT likes..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="15927:15971" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="17140:17212" placeholder="SELECT comme..comments..." />
-            <marker date="1417271760063" expanded="true" signature="17629:17728" placeholder="INSERT INTO ..." />
-            <marker date="1417271760063" expanded="true" signature="18375:18451" placeholder="SELECT * FRO..comments..." />
-            <marker date="1417271760063" expanded="true" signature="19021:19080" placeholder="DELETE FROM ..." />
-            <marker date="1417271760063" expanded="true" signature="19552:19598" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="20193:20259" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="20828:20926" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="21386:21438" placeholder="SELECT * FRO..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="22449:22515" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="22873:22917" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="24096:24162" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="24681:24776" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="25259:25317" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="25916:26006" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="26500:26558" placeholder="SELECT frien..friendships..." />
-            <marker date="1417271760063" expanded="true" signature="26904:26948" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="27655:27710" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="28044:28088" placeholder="SELECT * FRO..users..." />
-            <marker date="1417271760063" expanded="true" signature="28761:28816" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="29297:29373" placeholder="UPDATE pusfl..." />
-            <marker date="1417271760063" expanded="true" signature="29844:29899" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417271760063" expanded="true" signature="30349:30425" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="2982:3031" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="2982:3032" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="3537:3593" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="4148:4207" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="4764:4796" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="5402:5463" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="6129:6158" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="6729:6845" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="7270:7342" placeholder="SELECT pictu..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="7658:7721" placeholder="SELECT userI..users..." />
+            <marker date="1417272804207" expanded="true" signature="8066:8177" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="8902:9017" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="9667:9725" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="10360:10410" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="11098:11271" placeholder="SELECT pictu..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="12194:12290" placeholder="SELECT pictu..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="12907:12959" placeholder="SELECT * FRO..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="13610:13666" placeholder="SELECT likes..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="14164:14243" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="14717:14773" placeholder="SELECT likes..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="15238:15317" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="15909:15965" placeholder="SELECT likes..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="16302:16346" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="17515:17587" placeholder="SELECT comme..comments..." />
+            <marker date="1417272804207" expanded="true" signature="18004:18103" placeholder="INSERT INTO ..." />
+            <marker date="1417272804207" expanded="true" signature="18750:18826" placeholder="SELECT * FRO..comments..." />
+            <marker date="1417272804207" expanded="true" signature="19396:19455" placeholder="DELETE FROM ..." />
+            <marker date="1417272804207" expanded="true" signature="19927:19973" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="20568:20634" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="21203:21301" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="21761:21813" placeholder="SELECT * FRO..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="22824:22890" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="23248:23292" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="24471:24537" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="25056:25151" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="25634:25692" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="26291:26381" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="26875:26933" placeholder="SELECT frien..friendships..." />
+            <marker date="1417272804207" expanded="true" signature="27279:27323" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="28030:28085" placeholder="SELECT tags ..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="28419:28463" placeholder="SELECT * FRO..users..." />
+            <marker date="1417272804207" expanded="true" signature="29136:29191" placeholder="SELECT tags ..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="29672:29748" placeholder="UPDATE pusfl..." />
+            <marker date="1417272804207" expanded="true" signature="30219:30274" placeholder="SELECT tags ..pictures..." />
+            <marker date="1417272804207" expanded="true" signature="30724:30800" placeholder="UPDATE pusfl..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/photos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7050971" vertical-offset="1697" max-vertical-offset="3128">
-          <caret line="134" column="64" selection-start-line="134" selection-start-column="64" selection-end-line="134" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.35436893" vertical-offset="1680" max-vertical-offset="3145">
+          <caret line="116" column="49" selection-start-line="116" selection-start-column="49" selection-end-line="116" selection-end-column="49" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
           </folding>
