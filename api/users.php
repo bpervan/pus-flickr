@@ -18,10 +18,14 @@ class Users{
     private $dbHandler;
     private $uploadEngine;
 
+    private $logFile;
+
     public function __construct(){
         $this->responseBuilder = new ResponseBuilder();
         $this->dbHandler = new DBHandler();
         $this->uploadEngine = new UploadEngine();
+
+        $this->logFile = fopen("log.txt", 'a');
 
         $this->parseRequest();
     }
@@ -68,6 +72,9 @@ class Users{
             if(isset($_GET['action'])){
                 if($_GET['action'] == "photos"){
                     $photos = $this->dbHandler->getPublicImagesForUser($_GET['userId']);
+
+                    $log = "/users/{$_GET['userId']}/photos\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
+                    fwrite($this->logFile, $log);
                     $response = array("StatusCode" => 200, "StatusMessage" => "OK", "UserPhotos" => $photos);
                     header("Content-Type: application/json");
                     echo json_encode($response);
@@ -75,6 +82,9 @@ class Users{
             } else {
                 //Ako nije postavljen 'action', ispisujemo podatke o određenom korisniku
                 $user = $this->dbHandler->getUser($_GET['userId']);
+
+                $log = "/users/{$_GET['userId']}\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
+                fwrite($this->logFile, $log);
                 $response = array("StatusCode" => 200, "StatusMessage" => "OK", "User" => $user);
                 header("Content-Type: application/json");
                 echo json_encode($response);
@@ -82,6 +92,9 @@ class Users{
         } else {
             //ako nije postavljen 'userId', onda idemo na ispis svih usera u sustavu
             $users = $this->dbHandler->getSystemUsers();
+
+            $log = "/users\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
+            fwrite($this->logFile, $log);
             $response = array("StatusCode" => 200, "StatusMessage" => "OK", "Users" => $users);
             header("Content-Type: application/json");
             echo json_encode($response);
