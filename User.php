@@ -35,6 +35,16 @@ class User {
         );
     }
 
+    public function toArray(){
+        $retVal = array();
+        $retVal['userId'] = $this->userId;
+        $retVal['name'] = $this->name;
+        $retVal['surname'] = $this->surname;
+        $retVal['email'] = $this->email;
+        $retVal['username'] = $this->username;
+        return $retVal;
+    }
+
     public static $ERROR_WRONG_USERNAME = -2;
     public static $ERROR_WRONG_PASSWORD = -3;
 

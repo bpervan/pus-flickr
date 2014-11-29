@@ -42,6 +42,61 @@ class DBHandler {
         return null;
     }
 
+    public function updateUser(User $user, $hashedPassword){
+        $updateQuery = $this->connectionHandle->prepare(
+            "UPDATE pusflickr.users SET username = ?, password = ?, name = ?, surname = ?, email = ? WHERE users.userId = ?"
+        );
+        $updateQuery->bindParam(1, $user->username);
+        $updateQuery->bindParam(2, $hashedPassword);
+        $updateQuery->bindParam(3, $user->name);
+        $updateQuery->bindParam(4, $user->surname);
+        $updateQuery->bindParam(5, $user->email);
+
+        $updateQuery->bindParam(6, $user->userId);
+
+        try{
+            $this->connectionHandle->beginTransaction();
+            $updateQuery->execute();
+        } catch (PDOException $e){
+            $this->connectionHandle->rollBack();
+            return -1;
+        }
+        $this->connectionHandle->commit();
+        return 0;
+    }
+
+    public function deleteUser(User $user){
+        $deleteQuery = $this->connectionHandle->prepare("DELETE FROM pusflickr.users WHERE users.userId = ?");
+        $deleteQuery->bindParam(1, $user->userId);
+        try{
+            $this->connectionHandle->beginTransaction();
+            $deleteQuery->execute();
+        } catch (PDOException $e){
+            $this->connectionHandle->rollBack();
+            return -1;
+        }
+        $this->connectionHandle->commit();
+
+        $this->deleteUserPictures($user->userId);
+
+        return 0;
+    }
+
+    public function deleteUserPictures($userId){
+        $deleteQuery = $this->connectionHandle->prepare("DELETE FROM pusflickr.pictures WHERE pictures.userId = ?");
+        $deleteQuery->bindParam(1, $userId);
+        try{
+            $this->connectionHandle->beginTransaction();
+            $deleteQuery->execute();
+        } catch (PDOException $e){
+            $this->connectionHandle->rollBack();
+            return -1;
+        }
+        $this->connectionHandle->commit();
+
+        return 0;
+    }
+
     public function getSystemUsers(){
         $usersArray = array();
         $fetchQuery = $this->connectionHandle->prepare("SELECT * FROM pusflickr.users");
@@ -208,6 +263,30 @@ class DBHandler {
                     ));
                 }
             }
+        }
+        return $picturesArray;
+    }
+
+    public function getPublicImagesForUser($userId){
+        $picturesArray = array();
+        $fetchQuery = $this->connectionHandle->prepare("SELECT pictures.* FROM pusflickr.pictures
+             WHERE pictures.userId = ? AND privacy = 0");
+
+        $fetchQuery->bindParam(1, $userId);
+
+        if($fetchQuery->execute()){
+            while($row = $fetchQuery->fetch()) {
+                array_push($picturesArray, new Image(
+                    $row['pictureId'],
+                    $row['userId'],
+                    $row['likes'],
+                    $row['url'],
+                    $row['name'],
+                    $row['description'],
+                    $row['privacy']
+                ));
+            }
+
         }
         return $picturesArray;
     }
