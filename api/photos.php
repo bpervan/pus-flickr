@@ -67,10 +67,14 @@ class Photos{
         //Ako je postavljen photoId, dovaćamo pojedinačnu sliku
         if(isset($_GET['photoId'])){
             $photo = $this->dbHandler->getPicture($_GET['photoId']);
+            $log = "/photos/{$_GET['photoId']}\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
+            fwrite($this->logFile, $log);
             $response = array("StatusCode" => 200, "StatusMessage" => "OK", "Photo" => $photo);
         } else {
             //Sad dohvaćamo sve slike
             $photos = $this->dbHandler->getAllPictures();
+            $log = "/photos\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
+            fwrite($this->logFile, $log);
             $response = array("StatusCode" => 200, "StatusMessage" => "OK", "Photos" => $photos);
         }
         http_response_code(200);
@@ -87,6 +91,8 @@ class Photos{
             if(!is_null($user)){
                 $_POST['userId'] = $user->userId;
                 $this->uploadEngine->handleImageUpload();
+                $log = "/photos\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
+                fwrite($this->logFile, $log);
                 http_response_code(201);
                 $response = array("StatusCode" => 201, "StatusMessage" => "Created");
             } else {
@@ -141,6 +147,8 @@ class Photos{
                         $response = array("StatusCode" => 401, "StatusMessage" => "Unauthorized", $this->methodVars);
                     }
                 }
+                $log = "/photos/{$this->methodVars['photoId']}\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
+                fwrite($this->logFile, $log);
             } else {
                 //user ne postoji, unauthorized
                 http_response_code(401);

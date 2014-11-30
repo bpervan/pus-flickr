@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="users.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.83751494" vertical-offset="3073" max-vertical-offset="3910">
-              <caret line="222" column="19" selection-start-line="222" selection-start-column="19" selection-end-line="222" selection-end-column="19" />
+            <state vertical-scroll-proportion="-22.384615" vertical-offset="3175" max-vertical-offset="4080">
+              <caret line="221" column="16" selection-start-line="221" selection-start-column="16" selection-end-line="222" selection-end-column="45" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
               </folding>
@@ -37,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="photos.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="photos.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/photos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.148149" vertical-offset="1996" max-vertical-offset="3264">
-              <caret line="156" column="61" selection-start-line="156" selection-start-column="61" selection-end-line="156" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.7564895" vertical-offset="2533" max-vertical-offset="3400">
+              <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
               </folding>
@@ -168,8 +168,8 @@
         <option value="$PROJECT_DIR$/User.php" />
         <option value="$PROJECT_DIR$/UploadEngine.php" />
         <option value="$PROJECT_DIR$/DBHandler.php" />
-        <option value="$PROJECT_DIR$/api/photos.php" />
         <option value="$PROJECT_DIR$/api/users.php" />
+        <option value="$PROJECT_DIR$/api/photos.php" />
       </list>
     </option>
   </component>
@@ -745,13 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HTMLEngine.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.384615" vertical-offset="1237" max-vertical-offset="3026">
-          <caret line="112" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4068376" vertical-offset="0" max-vertical-offset="585">
@@ -902,20 +895,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/photos.php">
+    <entry file="file://$PROJECT_DIR$/api/users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.148149" vertical-offset="1996" max-vertical-offset="3264">
-          <caret line="156" column="61" selection-start-line="156" selection-start-column="61" selection-end-line="156" selection-end-column="61" />
+        <state vertical-scroll-proportion="-22.384615" vertical-offset="3175" max-vertical-offset="4080">
+          <caret line="221" column="16" selection-start-line="221" selection-start-column="16" selection-end-line="222" selection-end-column="45" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/users.php">
+    <entry file="file://$PROJECT_DIR$/HTMLEngine.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83751494" vertical-offset="3073" max-vertical-offset="3910">
-          <caret line="222" column="19" selection-start-line="222" selection-start-column="19" selection-end-line="222" selection-end-column="19" />
+        <state vertical-scroll-proportion="2.1732378" vertical-offset="0" max-vertical-offset="3026">
+          <caret line="112" column="44" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
+          <folding>
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401031086872" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/photos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7564895" vertical-offset="2533" max-vertical-offset="3400">
+          <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
           </folding>

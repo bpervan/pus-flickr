@@ -121,6 +121,8 @@ class Users{
                     if(!is_null($user)){
                         $_POST['userId'] = $user->userId;
                         $this->uploadEngine->handleImageUpload();
+                        $log = "/users/{$_POST['userId']}/photos\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
+                        fwrite($this->logFile, $log);
                         http_response_code(201);
                         $response = array("StatusCode" => 201, "StatusMessage" => "Created");
                     } else {
@@ -139,6 +141,8 @@ class Users{
                     $_POST['email'],
                     $_POST['username']
                 ), sha1($_POST['password']));
+                $log = "/users\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
+                fwrite($this->logFile, $log);
                 http_response_code(201);
                 $response = array("StatusCode" => 201, "StatusMessage" => "Created");
             } else {
@@ -169,6 +173,8 @@ class Users{
                         $this->methodVars['username']
                     ), sha1($this->methodVars['password']));
                 }
+                $log = "/users/{$userId}\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
+                fwrite($this->logFile, $log);
                 http_response_code(201);
                 $response = array("StatusCode" => 201, "StatusMessage" => "Created", $this->methodVars);
             } else {
@@ -191,6 +197,8 @@ class Users{
                 }
 
                 $this->dbHandler->updateUser($user, sha1($this->methodVars['password']));
+                $log = "/users/{$user->userId}\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
+                fwrite($this->logFile, $log);
                 http_response_code(202);
                 $response = array("StatusCode" => 202, "StatusMessage" => "Accepted", $this->methodVars);
             }
@@ -211,6 +219,8 @@ class Users{
                 $response = array("StatusCode" => 401, "StatusMessage" => "Bad Request", $this->methodVars);
             } else {
                 $this->dbHandler->deleteUser($user);
+                $log = "/users/{$user->userId}\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
+                fwrite($this->logFile, $log);
                 http_response_code(202);
                 $response = array("StatusCode" => 202, "StatusMessage" => "Accepted", $this->methodVars);
             }
