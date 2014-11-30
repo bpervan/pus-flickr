@@ -67,17 +67,24 @@ class Photos{
         //Ako je postavljen photoId, dovaćamo pojedinačnu sliku
         if(isset($_GET['photoId'])){
             $photo = $this->dbHandler->getPicture($_GET['photoId']);
+            if(is_null($photo)){
+                $response = array("StatusCode" => 404, "StatusMessage" => "Not Found");
+                http_response_code(404);
+            } else {
+                $response = array("StatusCode" => 200, "StatusMessage" => "OK", "Photo" => $photo);
+                http_response_code(200);
+            }
             $log = "/photos/{$_GET['photoId']}\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
             fwrite($this->logFile, $log);
-            $response = array("StatusCode" => 200, "StatusMessage" => "OK", "Photo" => $photo);
         } else {
             //Sad dohvaćamo sve slike
             $photos = $this->dbHandler->getAllPictures();
             $log = "/photos\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
             fwrite($this->logFile, $log);
             $response = array("StatusCode" => 200, "StatusMessage" => "OK", "Photos" => $photos);
+            http_response_code(200);
         }
-        http_response_code(200);
+
         header("Content-Type: application/json");
         echo json_encode($response);
     }
@@ -86,8 +93,8 @@ class Photos{
      * POST /photos -> dodaje se nova slika (obavezni parametri username i pass korisnika koji šalju sliku)
      */
     private function doPost(){
-        if(isset($_POST['username']) && isset($_POST['password'])){
-            $user = $this->dbHandler->checkUser($_POST['username'], sha1($_POST['password']));
+        if(isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW'])){
+            $user = $this->dbHandler->checkUser($_SERVER['PHP_AUTH_USER'], sha1($_SERVER['PHP_AUTH_PW']));
             if(!is_null($user)){
                 $_POST['userId'] = $user->userId;
                 $this->uploadEngine->handleImageUpload();
@@ -109,8 +116,8 @@ class Photos{
 
     /** PUT /photos/photoId -> kreira se nova slika sa photoId ili se apdejta slika sa photoId */
     private function doPut(){
-        if(isset($this->methodVars['photoId']) && isset($this->methodVars['username']) && isset($this->methodVars['password'])){
-            $user = $this->dbHandler->checkUser($this->methodVars['username'], sha1($this->methodVars['password']));
+        if(isset($this->methodVars['photoId']) && isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW'])){
+            $user = $this->dbHandler->checkUser($_SERVER['PHP_AUTH_USER'], sha1($_SERVER['PHP_AUTH_PW']));
             if(!is_null($user)){
                 //user postoji,
                 $photo = $this->dbHandler->getPicture($this->methodVars['photoId']);
@@ -164,8 +171,8 @@ class Photos{
 
     /** DELETE /photos/photoId -> briše se slika sa photoId, potrebno poslati username i password vlasnika fotke */
     private function doDelete(){
-        if(isset($this->methodVars['username']) && isset($this->methodVars['password']) && isset($this->methodVars['photoId'])){
-            $user = $this->dbHandler->checkUser($this->methodVars['username'], sha1($this->methodVars['password']));
+        if(isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW']) && isset($this->methodVars['photoId'])){
+            $user = $this->dbHandler->checkUser($_SERVER['PHP_AUTH_USER'], sha1($_SERVER['PHP_AUTH_PW']));
             if(is_null($user)){
                 http_response_code(401);
                 $response = array("StatusCode" => 401, "StatusMessage" => "Unauthorized", $this->methodVars);

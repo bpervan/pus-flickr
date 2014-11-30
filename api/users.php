@@ -83,11 +83,17 @@ class Users{
             } else {
                 //Ako nije postavljen 'action', ispisujemo podatke o određenom korisniku
                 $user = $this->dbHandler->getUser($_GET['userId']);
-
+                if(is_null($user)){
+                    $response = array("StatusCode" => 404, "StatusMessage" => "Not Found", "User" => $user);
+                    http_response_code(404);
+                } else {
+                    $response = array("StatusCode" => 200, "StatusMessage" => "OK", "User" => $user);
+                    http_response_code(200);
+                }
                 $log = "/users/{$_GET['userId']}\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
                 fwrite($this->logFile, $log);
-                http_response_code(200);
-                $response = array("StatusCode" => 200, "StatusMessage" => "OK", "User" => $user);
+
+
                 header("Content-Type: application/json");
                 echo json_encode($response);
             }
@@ -117,7 +123,8 @@ class Users{
                      * 2. Ako credentialsi valjaju, pozovi UploadEngine::handleImageUpload i postavi $_POST['userId']
                      * 3. Unutar tog upload engine - a izmijeni insertToDB funkciju da ubere userId is posta a ne sessiona
                      */
-                    $user = $this->dbHandler->checkUser($_POST['username'], sha1($_POST['password']));
+                    //$user = $this->dbHandler->checkUser($_POST['username'], sha1($_POST['password']));
+                    $user = $this->dbHandler->checkUser($_SERVER['PHP_AUTH_USER'], sha1($_SERVER['PHP_AUTH_PW']));
                     if(!is_null($user)){
                         $_POST['userId'] = $user->userId;
                         $this->uploadEngine->handleImageUpload();
@@ -132,15 +139,17 @@ class Users{
                 }
             }
         } else {
-            if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['name']) && isset($_POST['surname'])){
+            if(isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW']) && isset($_POST['name']) && isset($_POST['surname'])){
+
+            //if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['name']) && isset($_POST['surname'])){
                 $userId = $this->dbHandler->getLastUserId() + 1;
                 $this->dbHandler->insertUser(new User(
                     $userId,
                     $_POST['name'],
                     $_POST['surname'],
                     $_POST['email'],
-                    $_POST['username']
-                ), sha1($_POST['password']));
+                    $_SERVER['PHP_AUTH_USER']
+                ), sha1($_SERVER['PHP_AUTH_PW']));
                 $log = "/users\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
                 fwrite($this->logFile, $log);
                 http_response_code(201);
@@ -160,8 +169,8 @@ class Users{
             $user = $this->dbHandler->getUser($this->methodVars['userId']);
             //User je NULL, treba ga stvoriti
             if(is_null($user)){
-                if(isset($this->methodVars['username']) &&
-                    isset($this->methodVars['password']) &&
+                if(isset($_SERVER['PHP_AUTH_USER']) &&
+                    isset($_SERVER['PHP_AUTH_PW']) &&
                     isset($this->methodVars['name']) &&
                     isset($this->methodVars['surname'])) {
                     $userId = $this->methodVars['userId'];
@@ -170,8 +179,8 @@ class Users{
                         $this->methodVars['name'],
                         $this->methodVars['surname'],
                         $this->methodVars['email'],
-                        $this->methodVars['username']
-                    ), sha1($this->methodVars['password']));
+                        $_SERVER['PHP_AUTH_USER']
+                    ), sha1($_SERVER['PHP_AUTH_PW']));
                 }
                 $log = "/users/{$userId}\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
                 fwrite($this->logFile, $log);
@@ -179,12 +188,11 @@ class Users{
                 $response = array("StatusCode" => 201, "StatusMessage" => "Created", $this->methodVars);
             } else {
                 //User postoji, radimo update sa poslanim podacima
-
                 //trenutno ovdje postoji jedan krucijalan propust, svaki mujo može updateat kojeg god hoće usera xD
                 //druga banana je što se radi update svih fieldova u bazi. trebalo bi složiti da se updateaju samo oni
                 //koji su poslani u parametrima metode. i onda složiti nekakav UPDATE query builder
-                if(isset($this->methodVars['username'])){
-                    $user->username = $this->methodVars['username'];
+                if(isset($_SERVER['PHP_AUTH_USER'])){
+                    $user->username = $_SERVER['PHP_AUTH_USER'];
                 }
                 if(isset($this->methodVars['name'])){
                     $user->name = $this->methodVars['name'];
@@ -196,7 +204,7 @@ class Users{
                     $user->email = $this->methodVars['email'];
                 }
 
-                $this->dbHandler->updateUser($user, sha1($this->methodVars['password']));
+                $this->dbHandler->updateUser($user, sha1($_SERVER['PHP_AUTH_PW']));
                 $log = "/users/{$user->userId}\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
                 fwrite($this->logFile, $log);
                 http_response_code(202);
@@ -213,7 +221,7 @@ class Users{
     /** DELETE /users/id -> Briše se korisnik s id-jem */
     private function doDelete(){
         if(isset($this->methodVars['userId'])){
-            $user = $this->dbHandler->checkUser($this->methodVars['username'], sha1($this->methodVars['password']));
+            $user = $this->dbHandler->checkUser($_SERVER['PHP_AUTH_USER'], sha1($_SERVER['PHP_AUTH_PW']));
             if(is_null($user)){
                 http_response_code(401);
                 $response = array("StatusCode" => 401, "StatusMessage" => "Bad Request", $this->methodVars);
