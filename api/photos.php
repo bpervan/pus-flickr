@@ -67,18 +67,15 @@ class Photos{
         //Ako je postavljen photoId, dovaćamo pojedinačnu sliku
         if(isset($_GET['photoId'])){
             $photo = $this->dbHandler->getPicture($_GET['photoId']);
-
             $response = array("StatusCode" => 200, "StatusMessage" => "OK", "Photo" => $photo);
-            header("Content-Type: application/json");
-            echo json_encode($response);
         } else {
             //Sad dohvaćamo sve slike
             $photos = $this->dbHandler->getAllPictures();
-
             $response = array("StatusCode" => 200, "StatusMessage" => "OK", "Photos" => $photos);
-            header("Content-Type: application/json");
-            echo json_encode($response);
         }
+        http_response_code(200);
+        header("Content-Type: application/json");
+        echo json_encode($response);
     }
 
     /**
@@ -90,12 +87,15 @@ class Photos{
             if(!is_null($user)){
                 $_POST['userId'] = $user->userId;
                 $this->uploadEngine->handleImageUpload();
-                $response = array("StatusCode" => 4487, "StatusMessage" => "Uploaded");
+                http_response_code(201);
+                $response = array("StatusCode" => 201, "StatusMessage" => "Created");
             } else {
-                $response = array("StatusCode" => 65411, "StatusMessage" => "Not authorized");
+                http_response_code(401);
+                $response = array("StatusCode" => 401, "StatusMessage" => "Unauthorized");
             }
         } else {
-            $response = array("StatusCode" => 65411, "StatusMessage" => "Not authorized");
+            http_response_code(401);
+            $response = array("StatusCode" => 401, "StatusMessage" => "Unauthorized");
         }
         header("Content-Type: application/json");
         echo json_encode($response);
@@ -134,18 +134,21 @@ class Photos{
                             $photo->url = $this->methodVars['url'];
                         }
                         $this->dbHandler->updatePicture($photo);
-                        $response = array("StatusCode" => 202, "StatusMessage" => "Updated", $this->methodVars);
+                        http_response_code(202);
+                        $response = array("StatusCode" => 202, "StatusMessage" => "Accepted", $this->methodVars);
                     } else {
-                        $response = array("StatusCode" => 302, "StatusMessage" => "Unauthorized", $this->methodVars);
+                        http_response_code(401);
+                        $response = array("StatusCode" => 401, "StatusMessage" => "Unauthorized", $this->methodVars);
                     }
                 }
             } else {
                 //user ne postoji, unauthorized
-                $response = array("StatusCode" => 1234, "StatusMessage" => "Unauthorized", $this->methodVars);
+                http_response_code(401);
+                $response = array("StatusCode" => 401, "StatusMessage" => "Unauthorized", $this->methodVars);
             }
-
         } else {
-            $response = array("StatusCode" => 302, "StatusMessage" => "Insufficient data", $this->methodVars);
+            http_response_code(400);
+            $response = array("StatusCode" => 400, "StatusMessage" => "Bad Request", $this->methodVars);
         }
         header("Content-Type: application/json");
         echo json_encode($response);
@@ -156,17 +159,21 @@ class Photos{
         if(isset($this->methodVars['username']) && isset($this->methodVars['password']) && isset($this->methodVars['photoId'])){
             $user = $this->dbHandler->checkUser($this->methodVars['username'], sha1($this->methodVars['password']));
             if(is_null($user)){
-                $response = array("StatusCode" => 302, "StatusMessage" => "Unauthorized", $this->methodVars);
+                http_response_code(401);
+                $response = array("StatusCode" => 401, "StatusMessage" => "Unauthorized", $this->methodVars);
             } else {
                 //user postoji, samo još treba provjeriti je li vlasnik slike
                 if(0 == $this->dbHandler->deleteUserPicture($this->methodVars['photoId'], $user->userId)){
-                    $response = array("StatusCode" => 1234, "StatusMessage" => "Deleted", $this->methodVars);
+                    http_response_code(202);
+                    $response = array("StatusCode" => 202, "StatusMessage" => "Accepted", $this->methodVars);
                 } else {
-                    $response = array("StatusCode" => 302, "StatusMessage" => "Unauthorized", $this->methodVars);
+                    http_response_code(401);
+                    $response = array("StatusCode" => 401, "StatusMessage" => "Unauthorized", $this->methodVars);
                 }
             }
         } else {
-            $response = array("StatusCode" => 302, "StatusMessage" => "Insufficient data", $this->methodVars);
+            http_response_code(400);
+            $response = array("StatusCode" => 400, "StatusMessage" => "Bad Request", $this->methodVars);
         }
 
         $log = "/photos/{$this->methodVars['photoId']}\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
