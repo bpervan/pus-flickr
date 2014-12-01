@@ -191,24 +191,31 @@ class Users{
                 //trenutno ovdje postoji jedan krucijalan propust, svaki mujo može updateat kojeg god hoće usera xD
                 //druga banana je što se radi update svih fieldova u bazi. trebalo bi složiti da se updateaju samo oni
                 //koji su poslani u parametrima metode. i onda složiti nekakav UPDATE query builder
-                if(isset($_SERVER['PHP_AUTH_USER'])){
-                    $user->username = $_SERVER['PHP_AUTH_USER'];
-                }
-                if(isset($this->methodVars['name'])){
-                    $user->name = $this->methodVars['name'];
-                }
-                if(isset($this->methodVars['surname'])){
-                    $user->surname = $this->methodVars['surname'];
-                }
-                if(isset($this->methodVars['email'])){
-                    $user->email = $this->methodVars['email'];
+                $auth = $this->dbHandler->checkUser($_SERVER['PHP_AUTH_USER'], sha1($_SERVER['PHP_AUTH_PW']));
+                if(!is_null($auth) && $auth->userId == $user->userId){
+                    if(isset($_SERVER['PHP_AUTH_USER'])){
+                        $user->username = $_SERVER['PHP_AUTH_USER'];
+                    }
+                    if(isset($this->methodVars['name'])){
+                        $user->name = $this->methodVars['name'];
+                    }
+                    if(isset($this->methodVars['surname'])){
+                        $user->surname = $this->methodVars['surname'];
+                    }
+                    if(isset($this->methodVars['email'])){
+                        $user->email = $this->methodVars['email'];
+                    }
+
+                    $this->dbHandler->updateUser($user, sha1($_SERVER['PHP_AUTH_PW']));
+                    $log = "/users/{$user->userId}\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
+                    fwrite($this->logFile, $log);
+                    http_response_code(202);
+                    $response = array("StatusCode" => 202, "StatusMessage" => "Accepted", $this->methodVars);
+                } else {
+                    http_response_code(401);
+                    $response = array("StatusCode" => 401, "StatusMessage" => "Unauthorized", $this->methodVars);
                 }
 
-                $this->dbHandler->updateUser($user, sha1($_SERVER['PHP_AUTH_PW']));
-                $log = "/users/{$user->userId}\t{$_SERVER['HTTP_USER_AGENT']}\n\r";
-                fwrite($this->logFile, $log);
-                http_response_code(202);
-                $response = array("StatusCode" => 202, "StatusMessage" => "Accepted", $this->methodVars);
             }
         } else {
             http_response_code(400);
