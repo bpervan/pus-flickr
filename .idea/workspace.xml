@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/users.php">
+      <file leaf-file-name="stats.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/stats.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614" vertical-offset="204" max-vertical-offset="4335">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.72977626" vertical-offset="358" max-vertical-offset="2499">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
               </folding>
@@ -37,102 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="photos.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="photos.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/photos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27710843" vertical-offset="2814" max-vertical-offset="3519">
-              <caret line="175" column="25" selection-start-line="175" selection-start-column="25" selection-end-line="175" selection-end-column="25" />
-              <folding>
-                <element signature="e#6#91#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBHandler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBHandler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="9901" max-vertical-offset="16167">
-              <caret line="593" column="27" selection-start-line="593" selection-start-column="20" selection-end-line="593" selection-end-column="27" />
-              <folding>
-                <marker date="1417272804207" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
-                <marker date="1417272804207" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
-                <marker date="1417272804207" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
-                <marker date="1417272804207" expanded="true" signature="2982:3031" placeholder="DELETE FROM ..." />
-                <marker date="1417272804207" expanded="true" signature="2982:3032" placeholder="DELETE FROM ..." />
-                <marker date="1417272804207" expanded="true" signature="3537:3593" placeholder="DELETE FROM ..." />
-                <marker date="1417272804207" expanded="true" signature="4148:4207" placeholder="DELETE FROM ..." />
-                <marker date="1417272804207" expanded="true" signature="4764:4796" placeholder="SELECT * FRO..pictures..." />
-                <marker date="1417272804207" expanded="true" signature="5402:5463" placeholder="SELECT * FRO..pictures..." />
-                <marker date="1417272804207" expanded="true" signature="6129:6158" placeholder="SELECT * FRO..users..." />
-                <marker date="1417272804207" expanded="true" signature="6729:6845" placeholder="INSERT INTO ..." />
-                <marker date="1417272804207" expanded="true" signature="7270:7342" placeholder="SELECT pictu..pictures..." />
-                <marker date="1417272804207" expanded="true" signature="7658:7721" placeholder="SELECT userI..users..." />
-                <marker date="1417272804207" expanded="true" signature="8066:8177" placeholder="INSERT INTO ..." />
-                <marker date="1417272804207" expanded="true" signature="8902:9017" placeholder="INSERT INTO ..." />
-                <marker date="1417272804207" expanded="true" signature="9667:9725" placeholder="SELECT * FRO..pictures..." />
-                <marker date="1417272804207" expanded="true" signature="10360:10410" placeholder="SELECT * FRO..pictures..." />
-                <marker date="1417272804207" expanded="true" signature="11098:11271" placeholder="SELECT pictu..pictures..." />
-                <marker date="1417272804207" expanded="true" signature="12194:12290" placeholder="SELECT pictu..pictures..." />
-                <marker date="1417272804207" expanded="true" signature="12907:12959" placeholder="SELECT * FRO..pictures..." />
-                <marker date="1417272804207" expanded="true" signature="13610:13666" placeholder="SELECT likes..pictures..." />
-                <marker date="1417272804207" expanded="true" signature="14164:14243" placeholder="UPDATE pusfl..." />
-                <marker date="1417272804207" expanded="true" signature="14717:14773" placeholder="SELECT likes..pictures..." />
-                <marker date="1417272804207" expanded="true" signature="15238:15317" placeholder="UPDATE pusfl..." />
-                <marker date="1417272804207" expanded="true" signature="15909:15965" placeholder="SELECT likes..pictures..." />
-                <marker date="1417272804207" expanded="true" signature="16302:16346" placeholder="SELECT * FRO..users..." />
-                <marker date="1417272804207" expanded="true" signature="17515:17587" placeholder="SELECT comme..comments..." />
-                <marker date="1417272804207" expanded="true" signature="18004:18103" placeholder="INSERT INTO ..." />
-                <marker date="1417272804207" expanded="true" signature="18750:18826" placeholder="SELECT * FRO..comments..." />
-                <marker date="1417272804207" expanded="true" signature="19396:19455" placeholder="DELETE FROM ..." />
-                <marker date="1417272804207" expanded="true" signature="19927:19973" placeholder="SELECT * FRO..users..." />
-                <marker date="1417272804207" expanded="true" signature="20568:20634" placeholder="SELECT frien..friendships..." />
-                <marker date="1417272804207" expanded="true" signature="21203:21301" placeholder="UPDATE pusfl..." />
-                <marker date="1417272804207" expanded="true" signature="21761:21813" placeholder="SELECT * FRO..friendships..." />
-                <marker date="1417272804207" expanded="true" signature="22824:22890" placeholder="SELECT frien..friendships..." />
-                <marker date="1417272804207" expanded="true" signature="23248:23292" placeholder="SELECT * FRO..users..." />
-                <marker date="1417272804207" expanded="true" signature="24471:24537" placeholder="SELECT frien..friendships..." />
-                <marker date="1417272804207" expanded="true" signature="25056:25151" placeholder="UPDATE pusfl..." />
-                <marker date="1417272804207" expanded="true" signature="25634:25692" placeholder="SELECT frien..friendships..." />
-                <marker date="1417272804207" expanded="true" signature="26291:26381" placeholder="UPDATE pusfl..." />
-                <marker date="1417272804207" expanded="true" signature="26875:26933" placeholder="SELECT frien..friendships..." />
-                <marker date="1417272804207" expanded="true" signature="27279:27323" placeholder="SELECT * FRO..users..." />
-                <marker date="1417272804207" expanded="true" signature="28030:28085" placeholder="SELECT tags ..pictures..." />
-                <marker date="1417272804207" expanded="true" signature="28419:28463" placeholder="SELECT * FRO..users..." />
-                <marker date="1417272804207" expanded="true" signature="29136:29191" placeholder="SELECT tags ..pictures..." />
-                <marker date="1417272804207" expanded="true" signature="29672:29748" placeholder="UPDATE pusfl..." />
-                <marker date="1417272804207" expanded="true" signature="30219:30274" placeholder="SELECT tags ..pictures..." />
-                <marker date="1417272804207" expanded="true" signature="30724:30800" placeholder="UPDATE pusfl..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UploadEngine.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UploadEngine.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="2108">
-              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/register.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="1428">
-              <caret line="69" column="13" selection-start-line="55" selection-start-column="12" selection-end-line="69" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResponseBuilder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/ResponseBuilder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="612">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2061" max-vertical-offset="3434">
+              <caret line="165" column="49" selection-start-line="165" selection-start-column="46" selection-end-line="165" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -146,32 +55,14 @@
     </FindUsagesManager>
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Codes.php" />
-        <option value="$PROJECT_DIR$/.php" />
-        <option value="$PROJECT_DIR$/Exceptions/WrongPasswordException.php" />
-        <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/upload.php" />
-        <option value="$PROJECT_DIR$/Image.php" />
-        <option value="$PROJECT_DIR$/register.php" />
-        <option value="$PROJECT_DIR$/uploadimage.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/search.php" />
-        <option value="$PROJECT_DIR$/showuser.php" />
-        <option value="$PROJECT_DIR$/imagefilter.php" />
-        <option value="$PROJECT_DIR$/HTMLEngine.php" />
-        <option value="$PROJECT_DIR$/userfilter.php" />
-        <option value="$PROJECT_DIR$/Comment.php" />
-        <option value="$PROJECT_DIR$/showimage.php" />
-        <option value="$PROJECT_DIR$/api/ResponseBuilder.php" />
-        <option value="$PROJECT_DIR$/User.php" />
-        <option value="$PROJECT_DIR$/UploadEngine.php" />
-        <option value="$PROJECT_DIR$/DBHandler.php" />
-        <option value="$PROJECT_DIR$/api/photos.php" />
-        <option value="$PROJECT_DIR$/api/users.php" />
+        <option value="$PROJECT_DIR$/api/stats.php" />
       </list>
     </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -206,6 +97,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -238,9 +130,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PUSflickr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PUSflickr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php-WebHDFS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,15 +182,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
-      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -309,7 +218,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22693998" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1420205" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -345,82 +254,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
-          <caret line="53" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/showuser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1513" max-vertical-offset="2040">
-          <caret line="89" column="41" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="11807" max-vertical-offset="13481">
-          <caret line="396" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1417272804207" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="2982:3031" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="2982:3032" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="3537:3593" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="4148:4207" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="4764:4796" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="5402:5463" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="6129:6158" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="6729:6845" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="7270:7342" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="7658:7721" placeholder="SELECT userI..users..." />
-            <marker date="1417272804207" expanded="true" signature="8066:8177" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="8902:9017" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="9667:9725" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="10360:10410" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="11098:11271" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="12194:12290" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="12907:12959" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="13610:13666" placeholder="SELECT likes..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="14164:14243" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="14717:14773" placeholder="SELECT likes..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="15238:15317" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="15909:15965" placeholder="SELECT likes..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="16302:16346" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="17515:17587" placeholder="SELECT comme..comments..." />
-            <marker date="1417272804207" expanded="true" signature="18004:18103" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="18750:18826" placeholder="SELECT * FRO..comments..." />
-            <marker date="1417272804207" expanded="true" signature="19396:19455" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="19927:19973" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="20568:20634" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="21203:21301" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="21761:21813" placeholder="SELECT * FRO..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="22824:22890" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="23248:23292" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="24471:24537" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="25056:25151" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="25634:25692" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="26291:26381" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="26875:26933" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="27279:27323" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="28030:28085" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="28419:28463" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="29136:29191" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="29672:29748" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="30219:30274" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="30724:30800" placeholder="UPDATE pusfl..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Image.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="561">
           <caret line="18" column="96" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -442,7 +279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="539" max-vertical-offset="1428">
           <caret line="65" column="95" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -485,56 +321,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="6597" max-vertical-offset="13481">
           <caret line="432" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1417272804207" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="2982:3031" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="2982:3032" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="3537:3593" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="4148:4207" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="4764:4796" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="5402:5463" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="6129:6158" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="6729:6845" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="7270:7342" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="7658:7721" placeholder="SELECT userI..users..." />
-            <marker date="1417272804207" expanded="true" signature="8066:8177" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="8902:9017" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="9667:9725" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="10360:10410" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="11098:11271" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="12194:12290" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="12907:12959" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="13610:13666" placeholder="SELECT likes..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="14164:14243" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="14717:14773" placeholder="SELECT likes..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="15238:15317" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="15909:15965" placeholder="SELECT likes..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="16302:16346" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="17515:17587" placeholder="SELECT comme..comments..." />
-            <marker date="1417272804207" expanded="true" signature="18004:18103" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="18750:18826" placeholder="SELECT * FRO..comments..." />
-            <marker date="1417272804207" expanded="true" signature="19396:19455" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="19927:19973" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="20568:20634" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="21203:21301" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="21761:21813" placeholder="SELECT * FRO..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="22824:22890" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="23248:23292" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="24471:24537" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="25056:25151" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="25634:25692" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="26291:26381" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="26875:26933" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="27279:27323" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="28030:28085" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="28419:28463" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="29136:29191" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="29672:29748" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="30219:30274" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="30724:30800" placeholder="UPDATE pusfl..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -542,7 +328,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="561">
           <caret line="18" column="96" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -564,7 +349,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="539" max-vertical-offset="1428">
           <caret line="65" column="95" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -607,56 +391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="748">
           <caret line="36" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1417272804207" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="2982:3031" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="2982:3032" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="3537:3593" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="4148:4207" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="4764:4796" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="5402:5463" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="6129:6158" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="6729:6845" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="7270:7342" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="7658:7721" placeholder="SELECT userI..users..." />
-            <marker date="1417272804207" expanded="true" signature="8066:8177" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="8902:9017" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="9667:9725" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="10360:10410" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="11098:11271" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="12194:12290" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="12907:12959" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="13610:13666" placeholder="SELECT likes..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="14164:14243" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="14717:14773" placeholder="SELECT likes..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="15238:15317" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="15909:15965" placeholder="SELECT likes..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="16302:16346" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="17515:17587" placeholder="SELECT comme..comments..." />
-            <marker date="1417272804207" expanded="true" signature="18004:18103" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="18750:18826" placeholder="SELECT * FRO..comments..." />
-            <marker date="1417272804207" expanded="true" signature="19396:19455" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="19927:19973" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="20568:20634" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="21203:21301" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="21761:21813" placeholder="SELECT * FRO..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="22824:22890" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="23248:23292" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="24471:24537" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="25056:25151" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="25634:25692" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="26291:26381" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="26875:26933" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="27279:27323" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="28030:28085" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="28419:28463" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="29136:29191" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="29672:29748" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="30219:30274" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="30724:30800" placeholder="UPDATE pusfl..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -664,7 +398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="629">
           <caret line="28" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -759,14 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="1428">
-          <caret line="69" column="13" selection-start-line="55" selection-start-column="12" selection-end-line="69" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/uploadimage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8578256" vertical-offset="744" max-vertical-offset="1581">
@@ -778,15 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7921147" vertical-offset="0" max-vertical-offset="1020">
           <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/ResponseBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="612">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -794,7 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26403823" vertical-offset="0" max-vertical-offset="837">
           <caret line="18" column="96" selection-start-line="18" selection-start-column="96" selection-end-line="18" selection-end-column="96" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,14 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UploadEngine.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="2108">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_standard_manual.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8762136" vertical-offset="128" max-vertical-offset="952">
@@ -837,63 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9901" max-vertical-offset="16167">
-          <caret line="593" column="27" selection-start-line="593" selection-start-column="20" selection-end-line="593" selection-end-column="27" />
-          <folding>
-            <marker date="1417272804207" expanded="true" signature="826:891" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="1417:1527" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="2263:2356" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="2982:3031" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="2982:3032" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="3537:3593" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="4148:4207" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="4764:4796" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="5402:5463" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="6129:6158" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="6729:6845" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="7270:7342" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="7658:7721" placeholder="SELECT userI..users..." />
-            <marker date="1417272804207" expanded="true" signature="8066:8177" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="8902:9017" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="9667:9725" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="10360:10410" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="11098:11271" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="12194:12290" placeholder="SELECT pictu..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="12907:12959" placeholder="SELECT * FRO..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="13610:13666" placeholder="SELECT likes..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="14164:14243" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="14717:14773" placeholder="SELECT likes..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="15238:15317" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="15909:15965" placeholder="SELECT likes..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="16302:16346" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="17515:17587" placeholder="SELECT comme..comments..." />
-            <marker date="1417272804207" expanded="true" signature="18004:18103" placeholder="INSERT INTO ..." />
-            <marker date="1417272804207" expanded="true" signature="18750:18826" placeholder="SELECT * FRO..comments..." />
-            <marker date="1417272804207" expanded="true" signature="19396:19455" placeholder="DELETE FROM ..." />
-            <marker date="1417272804207" expanded="true" signature="19927:19973" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="20568:20634" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="21203:21301" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="21761:21813" placeholder="SELECT * FRO..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="22824:22890" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="23248:23292" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="24471:24537" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="25056:25151" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="25634:25692" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="26291:26381" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="26875:26933" placeholder="SELECT frien..friendships..." />
-            <marker date="1417272804207" expanded="true" signature="27279:27323" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="28030:28085" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="28419:28463" placeholder="SELECT * FRO..users..." />
-            <marker date="1417272804207" expanded="true" signature="29136:29191" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="29672:29748" placeholder="UPDATE pusfl..." />
-            <marker date="1417272804207" expanded="true" signature="30219:30274" placeholder="SELECT tags ..pictures..." />
-            <marker date="1417272804207" expanded="true" signature="30724:30800" placeholder="UPDATE pusfl..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5531661" vertical-offset="438" max-vertical-offset="1275">
@@ -903,18 +553,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614" vertical-offset="204" max-vertical-offset="4335">
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="4335">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#91#0#PHP" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31690142" vertical-offset="9901" max-vertical-offset="16167">
+          <caret line="593" column="27" selection-start-line="593" selection-start-column="20" selection-end-line="593" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UploadEngine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43889844" vertical-offset="765" max-vertical-offset="2108">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2667814" vertical-offset="437" max-vertical-offset="1428">
+          <caret line="69" column="13" selection-start-line="55" selection-start-column="12" selection-end-line="69" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/ResponseBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7659208" vertical-offset="31" max-vertical-offset="612">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/photos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27710843" vertical-offset="2814" max-vertical-offset="3519">
-          <caret line="175" column="25" selection-start-line="175" selection-start-column="25" selection-end-line="175" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2061" max-vertical-offset="3434">
+          <caret line="165" column="49" selection-start-line="165" selection-start-column="46" selection-end-line="165" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/php-WebHDFS/WebHDFS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2091">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/php-WebHDFS/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/stats.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72977626" vertical-offset="358" max-vertical-offset="2499">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
           </folding>
@@ -923,4 +621,3 @@
     </entry>
   </component>
 </project>
-
